@@ -4,10 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import menu from '../../public/menu.svg';
 import cardBg from '../../public/image.png';
+import { useState } from 'react';
 
 const SpaceCard = ({ title, id }) => {
+    const [toggleMenu, setToggleMenu] = useState(false);
 
-    const handleClick = () => {}
+    const handleClick = () => {
+        setToggleMenu(!toggleMenu);
+    }
 
     return (
         <>
@@ -25,7 +29,7 @@ const SpaceCard = ({ title, id }) => {
             <div className='relative flex justify-between items-center mt-1'>
                 <h2 className="text-white text-md font-medium pl-2">{title}</h2>
                 <Image src={menu} alt='menuIcon' onClick={handleClick}/>
-                <div className={`absolute bg-[#0DF2FF] rounded-md right-5`}>
+                <div className={`absolute bg-[#0DF2FF] rounded-md right-5 ${!toggleMenu ? 'hidden' : ''}`}>
                     <ul className='p-2 text-white'>
                         <li className='hover:bg-gray-200 p-1 mb-1 rounded cursor-pointer border-[#ffffffa4] border '>Edit SpaceName</li>
                         <li className='hover:bg-gray-200 p-1 rounded cursor-pointer border-[#ffffffa4] border  text-red-500'>Delete Space</li>
