@@ -6,7 +6,7 @@ import leaveIcon from '../../../public/leave.svg';
 import chatIcon from '../../../public/chat.svg';
 import users from '../../../public/users.svg';
 import dot from '../../../public/greenDot.svg';
-import ChatComponent from '../../components/chat'; // Importing the Chat component
+import ChatComponent from '../../components/Chat'; // Importing the Chat component
 
 const Code = () => {
     const [code, setCode] = useState('');
