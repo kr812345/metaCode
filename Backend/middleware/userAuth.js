@@ -1,31 +1,32 @@
-const { sendResponse } = require("../Helpers/helpers.commonFunc");
 const jwt = require('jsonwebtoken');
 require('dotenv').config(); // Load environment variables from .env file
 
 const verifyUserMiddleware = (req, res, next) => {
-    const token = req.headers["x-access-token"];
+    const token = req.headers["x-access-token"] || req.headers["authorization"]?.split(' ')[1];
     if (!token) {
-        sendResponse(res, null, 401, false, "Token not found");
-        return;
+        return res.status(401).json({ success: false, message: "Token not found" });
     }
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
         if (!decoded) {
-            sendResponse(res, null, 401, false, "Unauthorized Token");
-            return;
+            return res.status(401).json({ success: false, message: "Unauthorized Token" });
         }
 
-        req.user = decoded.user;
+        // Store decoded user info in req.user
+        req.user = { 
+            userId: decoded.user, 
+            isVerified: decoded.isVerified 
+        };
+        
         if (!decoded.isVerified) {
-            sendResponse(res, null, 401, false, "Invalid Token");
-            return;
+            return res.status(401).json({ success: false, message: "Invalid Token" });
         }
-        console.log('auth check done')
+        
+        console.log('Authentication Check Done');
         next();
     } catch (err) {
-        sendResponse(res, null, 401, false, "Unauthorized Token");
-        return;
+        return res.status(401).json({ success: false, message: "Unauthorized Token" });
     }
 };
 

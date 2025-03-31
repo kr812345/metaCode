@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const v1Router = express.Router();
 
 const userRoutes = require('./routes.user');
@@ -15,3 +15,4 @@ router.get('/health', (req, res) => {
 });
 
 module.exports = router;
+*/
