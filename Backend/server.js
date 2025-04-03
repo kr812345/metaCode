@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require('cors');
@@ -9,11 +10,30 @@ const dbConnect = require('./db/db');
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
+=======
+const dotenv = require('dotenv');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const path = require('path');
 
-// Middleware
+// Load environment variables
+const result = dotenv.config();
+if (result.error) {
+    console.error('Error loading .env file:', result.error);
+    process.exit(1);
+}
+
+// Debug: Check if environment variables are loaded
+console.log('MONGODB_URI:', process.env.MONGODB_URI ? 'Found' : 'Not found');
+console.log('PORT:', process.env.PORT || 'Using default (3000)');
+
+const app = express();
+>>>>>>> e6e6c04309923209261b7a64127cbbe6897dbe27
+
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 
+<<<<<<< HEAD
 const io = new Server(server, {
     cors: {
       origin: "*",
@@ -96,16 +116,42 @@ app.get('/api/protected', verifyUserMiddleware, (req, res) => {
         success: true, 
         message: 'You have access to protected route',
         user: req.user
+=======
+// MongoDB Connection
+const MONGODB_URI = process.env.MONGODB_URI;
+console.log('MONGODB_URI:', MONGODB_URI ? 'Found' : 'Not found');
+
+mongoose.connect(MONGODB_URI)
+    .then(async () => {
+        console.log('MongoDB Connected');
+        
+        // Drop and recreate the users collection
+        try {
+            await mongoose.connection.collection('users').drop();
+            console.log('Users collection dropped successfully');
+        } catch (err) {
+            if (err.code === 26) {
+                console.log('Users collection does not exist, creating new one');
+            } else {
+                console.error('Error dropping users collection:', err);
+            }
+        }
+    })
+    .catch(err => {
+        console.error('MongoDB connection error:', err);
+>>>>>>> e6e6c04309923209261b7a64127cbbe6897dbe27
     });
+
+// Routes
+const authRoutes = require('./routes/auth.routes');
+const roomRoutes = require('./routes/room.routes');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/rooms', roomRoutes);
+
+app.get('/', (req, res) => {
+    res.send('API is running.');
 });
 
-// Handle 404 - Route not found
-app.use('*', (req, res) => {
-    res.status(404).json({ success: false, message: 'Route not found' });
-});
-
-
-// Start Server
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

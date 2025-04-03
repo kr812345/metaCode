@@ -1,4 +1,4 @@
-const { createUserController, getUserDetailsController, loginUserController, forgetPasswordController, resendOtpToEmail, changePasswordController } = require('../controllers/controller.user');
+/*const { createUserController, getUserDetailsController, loginUserController, forgetPasswordController, resendOtpToEmail, changePasswordController } = require('../controllers/controller.user');
 const { verifyUserMiddleware} = require('../middleware/userAuth');
 
 const userRouter = require('express').Router();
@@ -13,3 +13,4 @@ userRouter.patch('/change', verifyUserMiddleware, changePasswordController);
 
 
 module.exports = userRouter;
+*/
