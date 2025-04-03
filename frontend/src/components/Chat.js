@@ -43,7 +43,7 @@ const ChatComponent = () => {
     };
 
     return (
-        <div className="w-80 h-150 flex-shrink-0 rounded-lg border-2 border-[#0DF2FF] bg-[#023A3E] shadow-lg flex flex-col">
+        <div className="w-80 h-162 flex-shrink-0 rounded-lg border-2 border-[#0DF2FF] bg-[#023A3E] shadow-lg flex flex-col">
             <div className="p-4 text-white flex-grow">
                 {messages.map((msg, index) => (
                     <div key={index}>{msg.user}: {msg.message}</div>

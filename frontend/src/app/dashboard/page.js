@@ -6,7 +6,7 @@ import Link from 'next/link';
 import HomeIcon from '../../../public/home.svg'; 
 import Image from 'next/image';
 import SpaceCard from '@/components/SpaceCard';
-
+import LogoutIcon from '../../../public/logout.svg'; // Import the logout icon
 
 const Dashboard = () => {
     
@@ -21,9 +21,16 @@ const Dashboard = () => {
                         <Link href='/'>
                         <h1 className='text-white text-2xl'>metaCode</h1>
                         </Link>
-                        <button className='bg-[#0DF2FF] hover:text-[#0DF2FF] border border-[#0A0F1E] rounded-lg px-8 py-2 hover:bg-[#0c1738c8] transition shadow-[0px_0px_8px_rgba(13,242,255,1)]'>
-                            Create Space
-                        </button>
+                        <div className='flex items-center'>
+                            <button className='bg-[#0DF2FF] hover:text-[#0DF2FF] border border-[#0A0F1E] rounded-lg px-8 py-2 hover:bg-[#0c1738c8] transition shadow-[0px_0px_8px_rgba(13,242,255,1)]'>
+                                Create Space
+                            </button>
+                            <Link href='/login'>
+                            <button className='ml-8 -mr-8' onClick={() => console.log('Logout clicked')}>
+                                <Image src={LogoutIcon} alt='Logout' width={28} height={28} />
+                            </button>
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Space Cards */}

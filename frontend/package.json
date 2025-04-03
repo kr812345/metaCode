@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@pixi/filter-pixelate": "^5.1.1",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
+    "axios": "^1.8.4",
+    "canvas": "^3.1.0",
+    "konva": "^9.3.20",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-konva": "^19.0.3",
     "react-tsparticles": "^2.12.2",
+    "socket.io-client": "^4.8.1",
     "tsparticles": "^3.8.1"
   },
   "devDependencies": {

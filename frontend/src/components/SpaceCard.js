@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import menu from '../../public/menu.svg';
@@ -8,14 +8,28 @@ import { useState } from 'react';
 
 const SpaceCard = ({ title, id }) => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const menuRef = useRef(null);
 
     const handleClick = () => {
         setToggleMenu(!toggleMenu);
     }
 
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setToggleMenu(false);
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <>
-        <Link href={`/space/${id}`}>
+        <Link href={`/room`}>
             <div className="relative not-md:h-40 h-50 bg-[#FF007A] overflow-clip rounded-lg hover:shadow-[0px_0px_8px_rgba(13,242,255,1)] transition cursor-pointer border border-[#0DF2FF]">
                 <div className=' w-full h-full '>
                     <Image src={cardBg} className='h-full object-cover' alt='spaceImage'/>
@@ -26,7 +40,7 @@ const SpaceCard = ({ title, id }) => {
                 </div>
             </div>
         </Link>
-            <div className='relative flex justify-between items-center mt-1'>
+            <div className='relative flex justify-between items-center mt-1' ref={menuRef}>
                 <h2 className="text-white text-md font-medium pl-2">{title}</h2>
                 <Image src={menu} alt='menuIcon' onClick={handleClick}/>
                 <div className={`absolute bg-[#0DF2FF] rounded-md right-5 ${!toggleMenu ? 'hidden' : ''}`}>

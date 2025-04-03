@@ -1,23 +1,33 @@
+'use client'
+
 import React from 'react';
+import BottomBar from '../../components/bottomBar'; // Import the BottomBar component
+import Image from 'next/image';
+import ChatBox from '../../components/Chat';   
+import dynamic from 'next/dynamic';
+// Dynamically import the Environment component with SSR turned off
+const Environment = dynamic(() => import('@/components/Environment'), { ssr: false });
 
 const room = () => {
+    const [showChat, setShowChat] = React.useState(false);
+
+    const toggleChat = () => {
+        setShowChat(prev => !prev);
+    }
+
     return (
         <>
         <div className='bg-[#0A0F1E] flex flex-col justify-between relative min-h-screen p-2'>
-        <div className='w-full h-12 bg-gray-700'>
-
+        <div className='w-full h-12 rounded-md bg-gray-700'>
+            
         </div>
-        <div className='w-full h-162 flex my-2 gap-2'>
-            <div className='w-1/2 h-full bg-gray-500 rounded-lg border-2 border-[#0DF2FF] '>
-                
+        <div className='w-full h-162 flex my-2 rounded-lg gap-2 transition-all'>
+            <div className='relative w-full h-162 flex rounded-lg gap-2'>
+                <Environment/>
             </div>
-            <div className='w-1/2 h-full bg-gray-500 rounded-lg border-2 border-[#0DF2FF] '>
-
-            </div>
+            {showChat && <ChatBox />}
         </div>
-        <div className='w-full h-12 bg-gray-900'>
-
-        </div>
+        <BottomBar toggleChat={toggleChat} /> 
         </div>
         </>
     );

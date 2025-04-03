@@ -6,13 +6,20 @@ import leaveIcon from '../../../public/leave.svg';
 import chatIcon from '../../../public/chat.svg';
 import users from '../../../public/users.svg';
 import dot from '../../../public/greenDot.svg';
+import cameraOn from '../../../public/cameraOn.svg';
+import cameraOff from '../../../public/cameraOff.svg';
+import mute from '../../../public/mute.svg';
+import unmute from '../../../public/unmute.svg';
 import ChatComponent from '../../components/Chat'; // Importing the Chat component
+import BottomBar from '../../components/bottomBar'; // Importing the BottomBar component
 
 const Code = () => {
     const [code, setCode] = useState('');
     const [output, setOutput] = useState('');
     const [usersOnline, setUsersOnline] = useState(2);
     const [isChatVisible, setIsChatVisible] = useState(false); // State to manage chat visibility
+    const [isAudioMuted, setIsAudioMuted] = useState(false); // State to manage audio mute
+    const [isVideoOn, setIsVideoOn] = useState(false); // State to manage video camera
 
     const handleSubmit = () => {
         // TODO: Add code execution logic
@@ -21,6 +28,14 @@ const Code = () => {
 
     const toggleChat = () => {
         setIsChatVisible(!isChatVisible); // Toggle chat visibility
+    }
+
+    const toggleAudio = () => {
+        setIsAudioMuted(!isAudioMuted); // Toggle audio mute
+    }
+
+    const toggleVideo = () => {
+        setIsVideoOn(!isVideoOn); // Toggle video camera
     }
 
     return (
@@ -73,62 +88,7 @@ const Code = () => {
             )}
 
             {/* Bottom Bar */}
-            <div className='w-full h-12 bg-gray-900 rounded-lg flex justify-between items-center px-4'>
-                {/* Left Side */}
-                <div className='flex items-center gap-4'>
-                    {/* Logo */}
-                    <div className='text-[#0DF2FF] font-bold text-xl'>
-                        metaCode
-                    </div>
-                    
-                    {/* User Profile */}
-                    <div className='flex items-center gap-2'>
-                        <div className='w-8 h-8 rounded-full bg-gray-600'></div>
-                        <span className='text-white'>Username</span>
-                    </div>
-
-                    {/* Audio/Video Controls */}
-                    <div className='flex gap-3'>
-                        <button className='p-2 rounded-full bg-gray-700 hover:bg-gray-600'>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-                            </svg>
-                        </button>
-                        <button className='p-2 rounded-full bg-gray-700 hover:bg-gray-600'>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Right Side */}
-                <div className='flex items-center gap-4'>
-                    <div onClick={toggleChat} className='cursor-pointer'>
-                        <Image 
-                            src={chatIcon} 
-                            alt="Chat" 
-                            className="hover:opacity-80 transition"
-                            width={24}
-                            height={24}
-                        />
-                    </div>
-                    <div className='flex items-center gap-2'>
-                        <Image src={users} alt='usersIcon'/>
-                        {<span className='text-white'>{usersOnline} </span>}
-                    </div>
-                    <Link href="/dashboard">
-                        <Image 
-                            src={leaveIcon} 
-                            alt="Leave Room" 
-                            className="cursor-pointer hover:opacity-80 transition"
-                            width={28}
-                            height={28}
-                        />
-                    </Link>
-                </div>
-            </div>
+            <BottomBar toggleChat={toggleChat} usersOnline={usersOnline} /> {/* Using the imported BottomBar component */}
         </div>
     );
 }
