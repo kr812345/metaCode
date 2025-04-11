@@ -145,9 +145,11 @@ mongoose.connect(MONGODB_URI)
 // Routes
 const authRoutes = require('./routes/auth.routes');
 const roomRoutes = require('./routes/room.routes');
+const questionRoutes = require('./routes/question.routes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
+app.use('/api/questions', questionRoutes);
 
 app.get('/', (req, res) => {
     res.send('API is running.');

@@ -63,7 +63,7 @@ const register = async (req, res) => {
                 user: user._id,
                 isVerified: true
             },
-            process.env.JWT_SECRET_KEY,
+            process.env.JWT_SECRET,
             { expiresIn: '24h' }
         );
         console.log('Token created successfully');
@@ -134,7 +134,7 @@ const login = async (req, res) => {
 
         // Create JWT token
         console.log('Creating JWT token...');
-        console.log('Using JWT_SECRET_KEY:', process.env.JWT_SECRET_KEY);
+        console.log('Using JWT_SECRET:', process.env.JWT_SECRET);
         
         const tokenPayload = { 
             user: user._id,
@@ -144,14 +144,14 @@ const login = async (req, res) => {
         
         const token = jwt.sign(
             tokenPayload,
-            process.env.JWT_SECRET_KEY,
+            process.env.JWT_SECRET,
             { expiresIn: '24h' }
         );
         console.log('Generated token:', token);
 
         // Verify the token can be decoded
         try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
             console.log('Token verification test successful:', decoded);
         } catch (verifyError) {
             console.error('Token verification test failed:', verifyError);
