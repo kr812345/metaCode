@@ -10,16 +10,16 @@ import cameraOn from '../../../public/cameraOn.svg';
 import cameraOff from '../../../public/cameraOff.svg';
 import mute from '../../../public/mute.svg';
 import unmute from '../../../public/unmute.svg';
-import ChatComponent from '../../components/Chat'; // Importing the Chat component
-import BottomBar from '../../components/bottomBar'; // Importing the BottomBar component
+import ChatComponent from '../../components/Chat';
+import BottomBar from '../../components/bottomBar';
+import { useVideoCall } from '../../contexts/VideoCallContext';
 
 const Code = () => {
     const [code, setCode] = useState('');
     const [output, setOutput] = useState('');
     const [usersOnline, setUsersOnline] = useState(2);
-    const [isChatVisible, setIsChatVisible] = useState(false); // State to manage chat visibility
-    const [isAudioMuted, setIsAudioMuted] = useState(false); // State to manage audio mute
-    const [isVideoOn, setIsVideoOn] = useState(false); // State to manage video camera
+    const [isChatVisible, setIsChatVisible] = useState(false);
+    const { isCameraOn, isMicOn, toggleCamera, toggleMicrophone } = useVideoCall();
 
     const handleSubmit = () => {
         // TODO: Add code execution logic
@@ -27,15 +27,7 @@ const Code = () => {
     }
 
     const toggleChat = () => {
-        setIsChatVisible(!isChatVisible); // Toggle chat visibility
-    }
-
-    const toggleAudio = () => {
-        setIsAudioMuted(!isAudioMuted); // Toggle audio mute
-    }
-
-    const toggleVideo = () => {
-        setIsVideoOn(!isVideoOn); // Toggle video camera
+        setIsChatVisible(prev => !prev);
     }
 
     return (
@@ -83,12 +75,15 @@ const Code = () => {
             {/* Chat Component Popup */}
             {isChatVisible && (
                 <div className='fixed bottom-16 right-4 z-50'>
-                    <ChatComponent /> {/* Using the imported Chat component */}
+                    <ChatComponent />
                 </div>
             )}
 
             {/* Bottom Bar */}
-            <BottomBar toggleChat={toggleChat} usersOnline={usersOnline} /> {/* Using the imported BottomBar component */}
+            <BottomBar 
+                toggleChat={toggleChat} 
+                usersOnline={usersOnline}
+            />
         </div>
     );
 }

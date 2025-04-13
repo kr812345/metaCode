@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import React from 'react';
 
 export function middleware(request) {
   // Get token from cookies
@@ -19,7 +20,7 @@ export function middleware(request) {
   }
 
   // If token exists and trying to access login/register
-  if (token && isPublicPath) {
+  if (token && isPublicPath && pathname !== '/') {
     return NextResponse.redirect(new URL('/', request.url));
   }
 

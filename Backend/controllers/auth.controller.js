@@ -10,8 +10,23 @@ const register = async (req, res) => {
         console.log('\n=== Registration Debug ===');
         console.log('Request body:', req.body);
         
-        const { name, email, password } = req.body;
-        console.log('Extracted fields:', { name, email, password: '***' });
+        const { 
+            name, 
+            email, 
+            password, 
+            skills = [], 
+            socialLinks = {},
+            avatar = {} 
+        } = req.body;
+
+        console.log('Extracted fields:', { 
+            name, 
+            email, 
+            password: '***', 
+            skills, 
+            socialLinks,
+            avatar 
+        });
 
         // Validate input
         if (!name || !email || !password) {
@@ -43,13 +58,25 @@ const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
         console.log('Password hashed successfully');
 
-        // Create new user
+        // Create new user with extended fields
         console.log('Creating new user...');
         const user = new User({
             name,
             email: normalizedEmail,
             password: hashedPassword,
-            role: 'user'
+            role: 'user',
+            avatar: {
+                id: avatar.id || null,
+                name: avatar.name || 'Default Avatar',
+                color: avatar.color || '#3498db'
+            },
+            skills,
+            socialLinks,
+            status: 'offline',
+            preferences: {
+                theme: 'light',
+                language: 'en'
+            }
         });
 
         console.log('Saving user to database...');
@@ -69,6 +96,24 @@ const register = async (req, res) => {
         console.log('Token created successfully');
 
         console.log('Registration successful, sending response');
+        
+        const cookieOptions = {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'strict',
+            maxAge: 24 * 60 * 60 * 1000 // 24 hours
+        };
+
+        // Set cookie using universalCookies if available
+        if (req.universalCookies) {
+            req.universalCookies.set('token', token, cookieOptions);
+        } else if (req.headers['cookie']) {
+            // Fallback to using Cookie if universalCookies is not available
+            const Cookie = require('cookie');
+            const cookieHeader = Cookie.serialize('token', token, cookieOptions);
+            res.setHeader('Set-Cookie', cookieHeader);
+        }
+
         res.status(201).json({
             success: true,
             message: "Registration successful",
@@ -77,7 +122,10 @@ const register = async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
-                role: user.role
+                role: user.role,
+                avatar: user.avatar,
+                skills: user.skills,
+                status: user.status
             }
         });
     } catch (error) {
@@ -100,6 +148,9 @@ const login = async (req, res) => {
     try {
         console.log('Login attempt:', req.body);
         const { email, password } = req.body;
+
+        // Set content type to JSON
+        res.setHeader('Content-Type', 'application/json');
 
         // Validate input
         if (!email || !password) {
@@ -134,31 +185,37 @@ const login = async (req, res) => {
 
         // Create JWT token
         console.log('Creating JWT token...');
-        console.log('Using JWT_SECRET_KEY:', process.env.JWT_SECRET_KEY);
         
         const tokenPayload = { 
             user: user._id,
             isVerified: true
         };
-        console.log('Token payload:', tokenPayload);
         
         const token = jwt.sign(
             tokenPayload,
             process.env.JWT_SECRET_KEY,
             { expiresIn: '24h' }
         );
-        console.log('Generated token:', token);
 
-        // Verify the token can be decoded
-        try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-            console.log('Token verification test successful:', decoded);
-        } catch (verifyError) {
-            console.error('Token verification test failed:', verifyError);
+        // Send JSON response
+        const cookieOptions = {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'strict',
+            maxAge: 24 * 60 * 60 * 1000 // 24 hours
+        };
+
+        // Set cookie using universalCookies if available
+        if (req.universalCookies) {
+            req.universalCookies.set('token', token, cookieOptions);
+        } else if (req.headers['cookie']) {
+            // Fallback to using Cookie if universalCookies is not available
+            const Cookie = require('cookie');
+            const cookieHeader = Cookie.serialize('token', token, cookieOptions);
+            res.setHeader('Set-Cookie', cookieHeader);
         }
 
-        console.log('Login successful, sending response.');
-        res.status(200).json({
+        return res.status(200).json({
             success: true,
             message: "Login successful",
             token,
@@ -166,12 +223,17 @@ const login = async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
-                role: user.role
+                role: user.role,
+                avatar: user.avatar,
+                skills: user.skills,
+                status: user.status,
+                currentRoom: user.currentRoom
             }
         });
+
     } catch (error) {
         console.error('Login error:', error);
-        res.status(500).json({ 
+        return res.status(500).json({ 
             success: false,
             message: "Error logging in" 
         });
@@ -186,7 +248,10 @@ const getUserDetails = async (req, res) => {
         console.log('User object from middleware:', req.user);
         const userId = req.user.user;
         
-        const user = await User.findById(userId).select('-password');
+        const user = await User.findById(userId)
+            .select('-password')
+            .populate('currentRoom');
+        
         if (!user) {
             return res.status(404).json({ 
                 success: false,
@@ -202,15 +267,20 @@ const getUserDetails = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 role: user.role,
-                createdAt: user.createdAt,
-                updatedAt: user.updatedAt
+                avatar: user.avatar,
+                skills: user.skills,
+                status: user.status,
+                currentRoom: user.currentRoom,
+                preferences: user.preferences,
+                socialLinks: user.socialLinks
             }
         });
     } catch (error) {
-        console.error('Get user details error:', error);
-        res.status(500).json({ 
+        console.error('Error fetching user details:', error);
+        return res.status(500).json({ 
             success: false,
-            message: "Error retrieving user details" 
+            message: "Error fetching user details",
+            error: error.message
         });
     }
 };

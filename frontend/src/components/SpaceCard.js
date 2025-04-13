@@ -1,56 +1,42 @@
+'use client'
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import { useRoom } from '@/contexts/RoomContext';
+import toast from 'react-hot-toast';
 
-import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import menu from '../../public/menu.svg';
-import cardBg from '../../public/image.png';
-import { useState } from 'react';
+const SpaceCard = ({ room }) => {
+    const router = useRouter();
+    const { handleJoinRoom, currentRoom } = useRoom();
 
-const SpaceCard = ({ title, id }) => {
-    const [toggleMenu, setToggleMenu] = useState(false);
-    const menuRef = useRef(null);
+    const handleRoomJoin = async () => {
+        try {
+            // If already in this room, just navigate
+            if (currentRoom?.id === room.id) {
+                router.push(`/room/${room.id}`);
+                return;
+            }
 
-    const handleClick = () => {
-        setToggleMenu(!toggleMenu);
-    }
-
-    const handleClickOutside = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setToggleMenu(false);
+            const joinedRoom = await handleJoinRoom(room.id);
+            if (joinedRoom) {
+                router.push(`/room/${room.id}`);
+            }
+        } catch (error) {
+            console.error('Join room error:', error);
+            toast.error(error.message || 'Failed to join room');
         }
-    }
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+    };
 
     return (
-        <>
-        <Link href={`/room`}>
-            <div className="relative not-md:h-40 h-50 bg-[#FF007A] overflow-clip rounded-lg hover:shadow-[0px_0px_8px_rgba(13,242,255,1)] transition cursor-pointer border border-[#0DF2FF]">
-                <div className=' w-full h-full '>
-                    <Image src={cardBg} className='h-full object-cover' alt='spaceImage'/>
-                </div>
-                <div className="absolute justify-between w-full flex -mt-8 px-4 h-8">
-                    <span className="text-[#0DF2FF] text-xs">Last active 2h ago</span>
-                    <span className="text-white text-xs">3 members</span>
-                </div>
-            </div>
-        </Link>
-            <div className='relative flex justify-between items-center mt-1' ref={menuRef}>
-                <h2 className="text-white text-md font-medium pl-2">{title}</h2>
-                <Image src={menu} alt='menuIcon' onClick={handleClick}/>
-                <div className={`absolute bg-[#0DF2FF] rounded-md right-5 ${!toggleMenu ? 'hidden' : ''}`}>
-                    <ul className='p-2 text-white'>
-                        <li className='hover:bg-gray-200 p-1 mb-1 rounded cursor-pointer border-[#ffffffa4] border '>Edit SpaceName</li>
-                        <li className='hover:bg-gray-200 p-1 rounded cursor-pointer border-[#ffffffa4] border  text-red-500'>Delete Space</li>
-                    </ul>
-                </div>
-            </div>
-        </>
+        <div className="bg-[#ffffff62] bg-opacity-60 border-3 border-[#0DF2FF] rounded-xl p-4">
+            <h3 className="text-xl font-semibold text-white mb-2">{room.name}</h3>
+            <p className="text-gray-300 mb-4">{room.description}</p>
+            <button
+                onClick={handleRoomJoin}
+                className="w-full bg-[#FF007A] text-white px-4 py-2 rounded-lg hover:bg-[#ff7aba] transition"
+            >
+                {currentRoom?.id === room.id ? 'Enter Room' : 'Join Room'}
+            </button>
+        </div>
     );
 };
 

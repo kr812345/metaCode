@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { io } from "socket.io-client";
+import SnakeGame from './SnakeGame';
 
 const socket = io("http://localhost:4000", { autoConnect: false });
 
@@ -7,20 +8,36 @@ const PixelatedRoom = () => {
   const canvasRef = useRef(null);
   const pixelSize = 10;
   const [players, setPlayers] = useState({});
-  const [avatar, setAvatar] = useState({ x: 100, y: 100, color: "#3498db", name: "You" });
+  const [avatar, setAvatar] = useState({ 
+    x: 100, 
+    y: 100, 
+    color: "#3498db", 
+    name: "You" 
+  });
   const [isConnected, setIsConnected] = useState(false);
+  const [showGame, setShowGame] = useState(false);
 
   const walls = [
     { x: 0, y: 0, width: 500, height: 20 },
     { x: 0, y: 380, width: 500, height: 20 },
     { x: 0, y: 0, width: 20, height: 400 },
     { x: 480, y: 0, width: 20, height: 400 },
+    // Game area wall
+    { x: 300, y: 100, width: 20, height: 200 },
   ];
 
   const chairs = [
     { x: 100, y: 150 },
     { x: 200, y: 250 },
   ];
+
+  // Game area
+  const gameArea = {
+    x: 320,
+    y: 100,
+    width: 160,
+    height: 200
+  };
 
   useEffect(() => {
     socket.connect();
@@ -77,6 +94,14 @@ const PixelatedRoom = () => {
       ctx.fillRect(chair.x, chair.y, 20, 20);
     });
 
+    // Draw game area
+    ctx.fillStyle = "#1e1e1e";
+    ctx.fillRect(gameArea.x, gameArea.y, gameArea.width, gameArea.height);
+    ctx.fillStyle = "#0DF2FF";
+    ctx.font = "14px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("Snake Game", gameArea.x + gameArea.width/2, gameArea.y - 5);
+
     if (!isConnected) {
       ctx.fillStyle = avatar.color;
       ctx.fillRect(avatar.x, avatar.y, pixelSize * 2, pixelSize * 2);
@@ -111,10 +136,26 @@ const PixelatedRoom = () => {
     if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) return;
 
     setAvatar((prev) => {
+      if (!prev) return { x: 100, y: 100, color: "#3498db", name: "You" };
+      
       const newPosition = {
+        ...prev,
         x: prev.x + (e.key === "ArrowLeft" ? -pixelSize : e.key === "ArrowRight" ? pixelSize : 0),
         y: prev.y + (e.key === "ArrowUp" ? -pixelSize : e.key === "ArrowDown" ? pixelSize : 0),
       };
+
+      // Check if player is entering game area
+      if (
+        newPosition.x >= gameArea.x - pixelSize * 2 &&
+        newPosition.x <= gameArea.x + gameArea.width &&
+        newPosition.y >= gameArea.y - pixelSize * 2 &&
+        newPosition.y <= gameArea.y + gameArea.height
+      ) {
+        setShowGame(true);
+        return prev;
+      } else {
+        setShowGame(false);
+      }
 
       for (let wall of walls) {
         if (
@@ -140,7 +181,19 @@ const PixelatedRoom = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  return <canvas ref={canvasRef} className="border border-black" />;
+  return (
+    <div className="relative">
+      <canvas ref={canvasRef} className="border border-black" />
+      {showGame && (
+        <div 
+          className="absolute top-[100px] right-[20px] w-[160px] h-[200px] bg-[#1e1e1e] rounded-lg overflow-hidden"
+          style={{ zIndex: 10 }}
+        >
+          <SnakeGame />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PixelatedRoom;

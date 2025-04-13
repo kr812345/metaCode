@@ -98,7 +98,8 @@ const joinRoom = async (req, res) => {
             });
         }
 
-        if (room.isMember(userId)) {
+        // Skip membership check if user is the creator
+        if (room.creator.toString() !== userId.toString() && room.isMember(userId)) {
             return res.status(400).json({ 
                 success: false,
                 message: "Already a member of this room" 
@@ -144,6 +145,7 @@ const leaveRoom = async (req, res) => {
             });
         }
 
+        // Check if user is a member
         if (!room.isMember(userId)) {
             return res.status(400).json({ 
                 success: false,
@@ -151,15 +153,22 @@ const leaveRoom = async (req, res) => {
             });
         }
 
-        // Prevent owner from leaving
-        if (room.getMemberRole(userId) === 'owner') {
+        // If user is the creator, they can't leave the room
+        if (room.creator.toString() === userId.toString()) {
             return res.status(400).json({ 
                 success: false,
-                message: "Room owner cannot leave the room" 
+                message: "Room creator cannot leave the room" 
             });
         }
 
-        await room.removeMember(userId);
+        // Remove the member
+        const updatedRoom = await room.removeMember(userId);
+        if (!updatedRoom) {
+            return res.status(500).json({ 
+                success: false,
+                message: "Failed to leave room" 
+            });
+        }
 
         res.status(200).json({
             success: true,

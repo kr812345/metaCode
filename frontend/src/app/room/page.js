@@ -5,14 +5,20 @@ import BottomBar from '../../components/bottomBar'; // Import the BottomBar comp
 import Image from 'next/image';
 import ChatBox from '../../components/Chat';   
 import dynamic from 'next/dynamic';
+import SnakeGame from '@/components/SnakeGame';
 // Dynamically import the Environment component with SSR turned off
 const Environment = dynamic(() => import('@/components/Environment'), { ssr: false });
 
 const room = () => {
     const [showChat, setShowChat] = React.useState(false);
+    const [showGame, setShowGame] = React.useState(false);
 
     const toggleChat = () => {
         setShowChat(prev => !prev);
+    }
+
+    const toggleGame = () => {
+        setShowGame(prev => !prev);
     }
 
     return (
@@ -26,6 +32,11 @@ const room = () => {
                 <Environment/>
             </div>
             {showChat && <ChatBox />}
+            {showGame && (
+                <div className='absolute top-0 right-0 w-1/3 h-full bg-[#1e1e1e] rounded-lg overflow-hidden'>
+                    <SnakeGame />
+                </div>
+            )}
         </div>
         <BottomBar toggleChat={toggleChat} /> 
         </div>

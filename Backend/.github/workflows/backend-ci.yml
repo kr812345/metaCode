@@ -1,0 +1,61 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        
+    - name: Install Dependencies
+      run: npm ci
+      
+    - name: Run Linter
+      run: npm run lint
+      
+    - name: Run Tests
+      run: npm test
+      
+    - name: Generate Coverage Report
+      run: npm run test:coverage
+      
+    - name: Upload Coverage to Codecov
+      uses: codecov/codecov-action@v3
+      
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Docker Image
+      run: docker build -t metacode-backend .
+      
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+    - name: Push to Docker Hub
+      run: |
+        docker tag metacode-backend ${{ secrets.DOCKERHUB_USERNAME }}/metacode-backend:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/metacode-backend:latest
+        
+    - name: Deploy to Production
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # Add deployment script or use cloud provider's deployment action
+        echo "Deploying to production" 

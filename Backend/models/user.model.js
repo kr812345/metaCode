@@ -55,12 +55,60 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ['user', 'admin'],
         default: 'user'
+    },
+    // New Metaverse-specific fields
+    avatar: {
+        type: {
+            id: {
+                type: String,
+                default: null
+            },
+            name: {
+                type: String,
+                default: 'Default Avatar'
+            },
+            color: {
+                type: String,
+                default: '#3498db'
+            }
+        },
+        default: {}
+    },
+    currentRoom: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Room',
+        default: null
+    },
+    status: {
+        type: String,
+        enum: ['online', 'offline', 'in-room', 'coding'],
+        default: 'offline'
+    },
+    skills: [{
+        type: String
+    }],
+    preferences: {
+        type: {
+            theme: {
+                type: String,
+                default: 'light'
+            },
+            language: {
+                type: String,
+                default: 'en'
+            }
+        },
+        default: {}
+    },
+    socialLinks: {
+        type: {
+            github: String,
+            linkedin: String
+        },
+        default: {}
     }
 }, {
     timestamps: true
 });
-
-// Create indexes
-userSchema.index({ email: 1 }, { unique: true });
 
 module.exports = mongoose.model('User', userSchema);

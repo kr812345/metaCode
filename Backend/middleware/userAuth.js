@@ -7,17 +7,20 @@ const verifyUserMiddleware = (req, res, next) => {
     console.log('Request Method:', req.method);
     console.log('All Headers:', JSON.stringify(req.headers, null, 2));
     
-    const token = req.headers["x-access-token"];
-    console.log('\nX-Access-Token:', token);
+    const authHeader = req.headers['authorization'];
+    console.log('\nAuthorization Header:', authHeader);
     
-    if (!token) {
-        console.log('No x-access-token found in headers');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        console.log('No Bearer token found in Authorization header');
         return res.status(401).json({ 
             success: false,
             message: "No access token provided" 
         });
     }
 
+    const token = authHeader.split(' ')[1];
+    console.log('\nExtracted Token:', token);
+    
     try {
         console.log('\nJWT_SECRET_KEY:', process.env.JWT_SECRET_KEY);
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
@@ -44,7 +47,7 @@ const verifyUserMiddleware = (req, res, next) => {
                 message: "Invalid token" 
             });
         }
-        
+        console.log(req.user);
         console.log('\nAuthentication successful, proceeding to next middleware');
         next();
     } catch (err) {
