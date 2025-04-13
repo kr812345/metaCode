@@ -1,0 +1,47 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@codemirror/lang-cpp": "^6.0.1",
+    "@codemirror/lang-java": "^6.0.0",
+    "@codemirror/lang-javascript": "^6.2.3",
+    "@codemirror/lang-python": "^6.1.7",
+    "@pixi/filter-pixelate": "^5.1.1",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
+    "@uiw/codemirror-theme-dracula": "^4.23.10",
+    "@uiw/react-codemirror": "^4.23.10",
+    "axios": "^1.8.4",
+    "canvas": "^3.1.0",
+    "konva": "^9.3.20",
+    "next": "15.2.3",
+    "phaser": "^3.88.2",
+    "react": "^19.0.0",
+    "react-cookie": "^8.0.1",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-konva": "^19.0.3",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.5.0",
+    "react-toastify": "^11.0.5",
+    "react-tsparticles": "^2.12.2",
+    "socket.io-client": "^4.8.1",
+    "tsparticles": "^3.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "tailwindcss": "^4"
+  }
+}
+

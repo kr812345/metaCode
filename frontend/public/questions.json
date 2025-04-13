@@ -1,0 +1,1602 @@
+[
+  {
+    "title": "Find the maximum element in an array - Variant 1",
+    "description": "Find the maximum element in an array.\nThis is variant 1 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 2",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 2 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 3",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 3 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 4",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 4 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 5",
+    "description": "Merge two sorted arrays.\nThis is variant 5 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 6",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 6 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 7",
+    "description": "Find the maximum element in an array.\nThis is variant 7 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 8",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 8 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 9",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 9 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 10",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 10 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 11",
+    "description": "Merge two sorted arrays.\nThis is variant 11 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 12",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 12 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 13",
+    "description": "Find the maximum element in an array.\nThis is variant 13 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 14",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 14 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 15",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 15 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 16",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 16 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 17",
+    "description": "Merge two sorted arrays.\nThis is variant 17 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 18",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 18 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 19",
+    "description": "Find the maximum element in an array.\nThis is variant 19 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 20",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 20 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 21",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 21 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 22",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 22 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 23",
+    "description": "Merge two sorted arrays.\nThis is variant 23 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 24",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 24 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 25",
+    "description": "Find the maximum element in an array.\nThis is variant 25 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 26",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 26 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 27",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 27 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 28",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 28 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 29",
+    "description": "Merge two sorted arrays.\nThis is variant 29 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 30",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 30 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 31",
+    "description": "Find the maximum element in an array.\nThis is variant 31 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 32",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 32 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 33",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 33 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 34",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 34 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 35",
+    "description": "Merge two sorted arrays.\nThis is variant 35 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 36",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 36 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 37",
+    "description": "Find the maximum element in an array.\nThis is variant 37 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 38",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 38 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 39",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 39 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 40",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 40 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 41",
+    "description": "Merge two sorted arrays.\nThis is variant 41 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 42",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 42 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 43",
+    "description": "Find the maximum element in an array.\nThis is variant 43 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 44",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 44 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 45",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 45 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 46",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 46 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 47",
+    "description": "Merge two sorted arrays.\nThis is variant 47 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 48",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 48 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 49",
+    "description": "Find the maximum element in an array.\nThis is variant 49 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 50",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 50 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 51",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 51 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 52",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 52 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 53",
+    "description": "Merge two sorted arrays.\nThis is variant 53 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 54",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 54 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 55",
+    "description": "Find the maximum element in an array.\nThis is variant 55 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 56",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 56 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 57",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 57 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 58",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 58 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 59",
+    "description": "Merge two sorted arrays.\nThis is variant 59 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 60",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 60 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 61",
+    "description": "Find the maximum element in an array.\nThis is variant 61 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 62",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 62 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 63",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 63 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 64",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 64 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 65",
+    "description": "Merge two sorted arrays.\nThis is variant 65 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 66",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 66 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 67",
+    "description": "Find the maximum element in an array.\nThis is variant 67 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 68",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 68 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 69",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 69 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 70",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 70 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 71",
+    "description": "Merge two sorted arrays.\nThis is variant 71 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 72",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 72 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 73",
+    "description": "Find the maximum element in an array.\nThis is variant 73 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 74",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 74 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 75",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 75 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 76",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 76 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 77",
+    "description": "Merge two sorted arrays.\nThis is variant 77 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 78",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 78 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 79",
+    "description": "Find the maximum element in an array.\nThis is variant 79 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 80",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 80 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 81",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 81 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 82",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 82 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 83",
+    "description": "Merge two sorted arrays.\nThis is variant 83 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 84",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 84 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 85",
+    "description": "Find the maximum element in an array.\nThis is variant 85 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 86",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 86 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 87",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 87 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 88",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 88 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 89",
+    "description": "Merge two sorted arrays.\nThis is variant 89 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 90",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 90 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 91",
+    "description": "Find the maximum element in an array.\nThis is variant 91 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 92",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 92 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 93",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 93 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 94",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 94 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  },
+  {
+    "title": "Merge two sorted arrays - Variant 95",
+    "description": "Merge two sorted arrays.\nThis is variant 95 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3], [2,5,6]",
+        "output": "[1,2,2,3,5,6]"
+      },
+      {
+        "input": "[0], [1]",
+        "output": "[0,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find all unique triplets that sum to zero - Variant 96",
+    "description": "Find all unique triplets that sum to zero.\nThis is variant 96 of the array question. Solve using appropriate techniques.",
+    "difficulty": "hard",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the maximum element in an array - Variant 97",
+    "description": "Find the maximum element in an array.\nThis is variant 97 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "Example input 1",
+        "output": "Expected output 1"
+      },
+      {
+        "input": "Example input 2",
+        "output": "Expected output 2"
+      }
+    ]
+  },
+  {
+    "title": "Find the two numbers that sum to a target value - Variant 98",
+    "description": "Find the two numbers that sum to a target value.\nThis is variant 98 of the array question. Solve using appropriate techniques.",
+    "difficulty": "easy",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[2,7,11,15], 9",
+        "output": "[0,1]"
+      },
+      {
+        "input": "[3,2,4], 6",
+        "output": "[1,2]"
+      }
+    ]
+  },
+  {
+    "title": "Rotate the array to the right by k steps - Variant 99",
+    "description": "Rotate the array to the right by k steps.\nThis is variant 99 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[1,2,3,4,5,6,7], 3",
+        "output": "[5,6,7,1,2,3,4]"
+      },
+      {
+        "input": "[1,2], 1",
+        "output": "[2,1]"
+      }
+    ]
+  },
+  {
+    "title": "Find the subarray with the maximum sum (Kadane's Algorithm) - Variant 100",
+    "description": "Find the subarray with the maximum sum (Kadane's Algorithm).\nThis is variant 100 of the array question. Solve using appropriate techniques.",
+    "difficulty": "medium",
+    "category": "array",
+    "testCases": [
+      {
+        "input": "[-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6"
+      },
+      {
+        "input": "[1]",
+        "output": "1"
+      }
+    ]
+  }
+]
