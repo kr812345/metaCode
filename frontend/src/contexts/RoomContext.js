@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
 import { useSocket } from './SocketContext';
-import { getRooms, createRoom, joinRoom, leaveRoom } from '../axiosReq/room';
+import { getRooms, createRoom, joinRoom, leaveRoom, joinRoomByInvite, getInviteLink } from '../axiosReq/room';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import { useCookies } from 'react-cookie';
@@ -18,13 +18,11 @@ export const RoomProvider = ({ children }) => {
     const { user } = useAuth();
     const [cookies] = useCookies(['token']);
     const router = useRouter();
-    const [currentRoom, setRoom] = useState(null);
+    const [currentRoom, setCurrentRoom] = useState(null);
     const [roomMembers, setRoomMembers] = useState([]);
 
     const fetchRooms = async () => {
-        const token = cookies.token;
-        
-        if (!token) {
+        if (!cookies.token) {
             toast.error('Please log in to view rooms');
             router.push('/login');
             return;
@@ -32,7 +30,7 @@ export const RoomProvider = ({ children }) => {
         
         try {
             setIsLoading(true);
-            const response = await getRooms();
+            const response = await getRooms(cookies.token);
             
             if (response.success) {
                 setRooms(response.rooms);
@@ -48,7 +46,7 @@ export const RoomProvider = ({ children }) => {
     };
 
     const handleCreateRoom = async (formData) => {
-        if (!user?.token) {
+        if (!cookies.token) {
             toast.error('Please log in to create a room');
             router.push('/login');
             return;
@@ -59,9 +57,14 @@ export const RoomProvider = ({ children }) => {
             const response = await createRoom(formData);
             
             if (response.success) {
+                const roomData = {
+                    ...response.room,
+                    inviteCode: response.room.inviteCode
+                };
                 toast.success('Room created successfully!');
-                setRooms(prevRooms => [...prevRooms, response.room]);
-                return response.room;
+                setRooms(prevRooms => [...prevRooms, roomData]);
+                setCurrentRoom(roomData);
+                return roomData;
             } else {
                 toast.error(response.message || 'Failed to create room');
                 return null;
@@ -76,7 +79,7 @@ export const RoomProvider = ({ children }) => {
     };
 
     const handleJoinRoom = async (roomId) => {
-        if (!user?.token) {
+        if (!cookies.token) {
             toast.error('Please log in to join a room');
             router.push('/login');
             return;
@@ -95,37 +98,19 @@ export const RoomProvider = ({ children }) => {
             
             if (response.success) {
                 console.log('HTTP join successful:', response.room);
-                setRoom(response.room);
+                setCurrentRoom(response.room);
                 
                 try {
                     console.log('Attempting to join room via socket...');
-                    await socket.emit("join-room", { roomId });
+                    await socket.emit('join-room', roomId);
                     console.log('Socket join successful');
                     toast.success('Joined room successfully');
                     setRoomMembers(response.room.members);
                     return response.room;
                 } catch (socketError) {
                     console.error('Socket join error:', socketError);
-                    // Even if socket join fails, we're still in the room via HTTP
                     toast.error('Connected to room but socket connection failed. Some features may not work.');
                     return response.room;
-                }
-            } else if (response.message === "Already a member of this room") {
-                // If we're already a member, just set the current room and join via socket
-                const room = await getRooms();
-                const targetRoom = room.rooms.find(r => r.id === roomId);
-                if (targetRoom) {
-                    setRoom(targetRoom);
-                    try {
-                        await socket.emit("join-room", { roomId });
-                        toast.success('Reconnected to room successfully');
-                        setRoomMembers(targetRoom.members);
-                        return targetRoom;
-                    } catch (socketError) {
-                        console.error('Socket join error:', socketError);
-                        toast.error('Connected to room but socket connection failed. Some features may not work.');
-                        return targetRoom;
-                    }
                 }
             } else {
                 console.error('Invalid response from server:', response);
@@ -142,16 +127,16 @@ export const RoomProvider = ({ children }) => {
         }
     };
 
-    const handleLeaveRoom = async () => {
+    const handleLeaveRoom = async (roomId) => {
         if (!currentRoom) return;
 
         setIsLoading(true);
         setError(null);
 
         try {
-            await leaveRoom(currentRoom.id);
-            socket.emit("leave-room", { roomId: currentRoom.id });
-            setRoom(null);
+            await leaveRoom(roomId);
+            socket.emit('leave-room', roomId);
+            setCurrentRoom(null);
             setRoomMembers([]);
             toast.success('Left room successfully');
         } catch (err) {
@@ -164,36 +149,101 @@ export const RoomProvider = ({ children }) => {
         }
     };
 
+    const handleJoinByInvite = async (inviteCode) => {
+        if (!cookies.token) {
+            toast.error('Please log in to join a room');
+            router.push('/login');
+            return;
+        }
+
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const response = await joinRoomByInvite(inviteCode);
+            
+            if (response.success) {
+                setCurrentRoom(response.room);
+                // Connect to socket room
+                try {
+                    await socket.emit('join-room', response.room.id);
+                    toast.success('Joined room successfully');
+                    setRoomMembers(response.room.members);
+                    return response.room;
+                } catch (socketError) {
+                    console.error('Socket join error:', socketError);
+                    toast.error('Connected to room but socket connection failed. Some features may not work.');
+                    return response.room;
+                }
+            } else {
+                throw new Error(response.message || 'Failed to join room');
+            }
+        } catch (err) {
+            console.error('Join room by invite error:', err);
+            const errorMessage = err.message || 'Failed to join room';
+            setError(errorMessage);
+            toast.error(errorMessage);
+            throw err;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Socket event handlers for room updates
     useEffect(() => {
         if (!isConnected || !socket) return;
 
         const handleRoomJoined = (data) => {
-            setRoom(data.room);
+            setCurrentRoom(data);
             setRoomMembers(data.members);
             setIsLoading(false);
         };
 
-        const handleMemberJoined = (data) => {
-            setRoomMembers(prev => [...prev, data.member]);
+        const handleUserEntered = (data) => {
+            setRoomMembers(prev => [...prev, {
+                userId: data.userId,
+                name: data.name,
+                avatar: data.avatar,
+                color: data.color
+            }]);
+            toast.success(`${data.name} joined the room`);
         };
 
-        const handleMemberLeft = (data) => {
+        const handleUserLeft = (data) => {
             setRoomMembers(prev => prev.filter(member => member.userId !== data.userId));
+            toast.info(`${data.name} left the room`);
         };
 
-        socket.on("room-joined", handleRoomJoined);
-        socket.on("member-joined", handleMemberJoined);
-        socket.on("member-left", handleMemberLeft);
+        const handleError = (error) => {
+            setError(error);
+            toast.error(error);
+        };
+
+        socket.on('room-joined', handleRoomJoined);
+        socket.on('user-entered', handleUserEntered);
+        socket.on('user-left', handleUserLeft);
+        socket.on('room-error', handleError);
 
         return () => {
-            socket.off("room-joined", handleRoomJoined);
-            socket.off("member-joined", handleMemberJoined);
-            socket.off("member-left", handleMemberLeft);
+            socket.off('room-joined', handleRoomJoined);
+            socket.off('user-entered', handleUserEntered);
+            socket.off('user-left', handleUserLeft);
+            socket.off('room-error', handleError);
         };
     }, [isConnected, socket]);
 
+    // Reset room state when user logs out
+    useEffect(() => {
+        if (!cookies.token) {
+            setCurrentRoom(null);
+            setRoomMembers([]);
+            setRooms([]);
+        }
+    }, [cookies.token]);
+
     const value = {
         rooms,
+        setCurrentRoom,
         currentRoom,
         roomMembers,
         isLoading,
@@ -201,7 +251,9 @@ export const RoomProvider = ({ children }) => {
         fetchRooms,
         createRoom: handleCreateRoom,
         handleJoinRoom,
-        handleLeaveRoom
+        handleLeaveRoom,
+        handleJoinByInvite,
+        getInviteLink
     };
 
     return (

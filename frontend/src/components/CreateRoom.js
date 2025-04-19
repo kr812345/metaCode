@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useRoom } from '@/contexts/RoomContext';
+import { useRoom } from '../contexts/RoomContext';
 import { toast } from 'react-toastify';
 
 const CreateRoom = ({ onClose }) => {

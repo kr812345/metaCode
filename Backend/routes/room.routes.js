@@ -1,26 +1,14 @@
 const express = require('express');
-const router = express.Router();
-const { verifyUserMiddleware } = require('../middleware/userAuth');
-const { 
-    createRoom, 
-    getRooms, 
-    joinRoom,
-    leaveRoom 
-} = require('../controllers/room.controller');
+const roomRouter = express.Router();
+const { createRoom, getRooms, joinRoom, leaveRoom, joinRoomByInvite } = require('../controllers/room.controller.js');
+const verifyUserMiddleware = require('../middleware/userAuth');
+const { validateRoomCreation } = require('../middleware/validation');
 
-// Apply authentication middleware to all routes
-router.use(verifyUserMiddleware);
+// Protected routes
+roomRouter.post('/', verifyUserMiddleware, createRoom);
+roomRouter.get('/', verifyUserMiddleware, getRooms);
+roomRouter.post('/:roomId/join', verifyUserMiddleware, joinRoom);
+roomRouter.post('/:roomId/leave', verifyUserMiddleware, leaveRoom);
+roomRouter.post('/join/invite/:inviteCode', verifyUserMiddleware, joinRoomByInvite);
 
-// Create a new room
-router.post('/createRoom', createRoom);
-
-// Get all rooms for the user
-router.get('/getRooms', getRooms);
-
-// Join a room
-router.post('/joinRoom/:roomId', joinRoom);
-
-// Leave a room
-router.post('/leaveRoom/:roomId', leaveRoom);
-
-module.exports = router; 
+module.exports = roomRouter;

@@ -13,7 +13,8 @@ const VideoCall = () => {
         isCameraOn,
         isMicOn,
         initiateCall,
-        setCurrentRoom
+        setCurrentRoom,
+        socket
     } = useVideoCall();
 
     const { currentRoom, roomMembers, isLoading, error } = useRoom();
@@ -23,6 +24,21 @@ const VideoCall = () => {
             setCurrentRoom(currentRoom.id);
         }
     }, [currentRoom, setCurrentRoom]);
+
+    useEffect(() => {
+        const handleRemoteVideoState = ({ userId, isCameraOn }) => {
+            const videoElement = remoteVideoRefs.current[userId];
+            if (videoElement) {
+                videoElement.style.display = isCameraOn ? 'block' : 'none';
+            }
+        };
+
+        socket?.on('remote-video-state-changed', handleRemoteVideoState);
+
+        return () => {
+            socket?.off('remote-video-state-changed', handleRemoteVideoState);
+        };
+    }, [socket]);
 
     if (isLoading) {
         return <div className="flex items-center justify-center h-full">
@@ -69,7 +85,13 @@ const VideoCall = () => {
                         autoPlay 
                         muted 
                         className="w-full h-full object-cover"
+                        style={{ display: isCameraOn ? 'block' : 'none' }}
                     />
+                    {!isCameraOn && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-[#0A2342]">
+                            <img src="/cameraOff.svg" alt="Camera Off" className="w-16 h-16" />
+                        </div>
+                    )}
                     <div className="absolute bottom-2 left-2 text-white">
                         You
                     </div>

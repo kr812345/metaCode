@@ -88,16 +88,40 @@ export const VideoCallProvider = ({ children }) => {
                 const videoTrack = localStream.getVideoTracks()[0];
                 if (videoTrack) {
                     if (isCameraOn) {
-                        videoTrack.enabled = false;
+                        // Stop the video track completely
+                        videoTrack.stop();
+                        // Remove the video track from the stream
+                        localStream.removeTrack(videoTrack);
+                        // Update the video element
+                        if (localVideoRef.current) {
+                            localVideoRef.current.srcObject = localStream;
+                        }
                         setIsCameraOn(false);
+                        // Notify other users that camera is off
+                        socket?.emit("video-state-changed", {
+                            userId: user?._id,
+                            isCameraOn: false
+                        });
                     } else {
-                        videoTrack.enabled = true;
+                        // Re-enable camera
+                        const newStream = await navigator.mediaDevices.getUserMedia({ video: true });
+                        const newVideoTrack = newStream.getVideoTracks()[0];
+                        localStream.addTrack(newVideoTrack);
+                        if (localVideoRef.current) {
+                            localVideoRef.current.srcObject = localStream;
+                        }
                         setIsCameraOn(true);
+                        // Notify other users that camera is on
+                        socket?.emit("video-state-changed", {
+                            userId: user?._id,
+                            isCameraOn: true
+                        });
                     }
                 }
             }
         } catch (err) {
             console.error("Error toggling camera:", err);
+            toast.error("Failed to toggle camera. Please check your permissions.");
         }
     };
 
@@ -163,4 +187,4 @@ export const useVideoCall = () => {
         throw new Error('useVideoCall must be used within a VideoCallProvider');
     }
     return context;
-}; 
+};

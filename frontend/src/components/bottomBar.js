@@ -1,10 +1,10 @@
 'use client'
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import chatIcon from '../../public/chat.svg';
 import users from '../../public/users.svg';
-import leaveIcon from '../../public/leave.svg';
+import leaveIcon from '../../public/logout.svg';
 import mute from '../../public/mute.svg';
 import unmute from '../../public/unmute.svg';
 import cameraOn from '../../public/cameraOn.svg';
@@ -12,8 +12,9 @@ import cameraOff from '../../public/cameraOff.svg';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { useVideoCall } from '../contexts/VideoCallContext';
+import { useRoom } from '@/contexts/RoomContext';
 
-const BottomBar = ({toggleChat, onLeaveRoom}) => {
+const BottomBar = ({ toggleChat, onLeaveRoom }) => {
     const [usersOnline, setUsersOnline] = useState(1);
     const [isChatOpen, setIsChatOpen] = useState(false);
     const router = useRouter();
@@ -24,6 +25,7 @@ const BottomBar = ({toggleChat, onLeaveRoom}) => {
         toggleMicrophone,
         endCall
     } = useVideoCall();
+    const { currentRoom } = useRoom();
 
     const handleChatToggle = () => {
         setIsChatOpen(!isChatOpen);
@@ -50,6 +52,18 @@ const BottomBar = ({toggleChat, onLeaveRoom}) => {
     const handleToggleVideo = () => {
         console.log('Toggling video, current state:', isCameraOn);
         toggleCamera();
+    };
+
+    const handleCopyInviteLink = () => {
+        if (!currentRoom?.inviteCode) {
+            toast.error('Unable to generate invite link');
+            return;
+        }
+
+        const inviteLink = `${window.location.origin}/invite/${currentRoom.inviteCode}`;
+        navigator.clipboard.writeText(inviteLink)
+            .then(() => toast.success('Invite link copied to clipboard!'))
+            .catch(() => toast.error('Failed to copy invite link'));
     };
 
     return (
@@ -80,6 +94,10 @@ const BottomBar = ({toggleChat, onLeaveRoom}) => {
             <div className='flex items-center gap-4'>
                 <button onClick={handleChatToggle} className='w-15 flex justify-center p-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
                     <Image src={chatIcon} alt='Chat' width={24} height={24} />
+                </button>
+                <button onClick={handleCopyInviteLink} className='p-2 flex gap-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
+                    <Image src={users} alt='Invite' width={24} height={24} />
+                    <span className='text-white'>Invite</span>
                 </button>
                 <button className='p-2 flex gap-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
                     <Image src={users} alt='usersIcon' width={24} height={24} />

@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
+const socketUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 const environment = process.env.NEXT_PUBLIC_ENVIRONMENT || 'development';
 
@@ -14,12 +14,18 @@ class SocketManager {
         this.reconnectDelay = 1000;
     }
 
-    connect(token) {
+    connect() {
         if (this.socket) {
             this.disconnect();
         }
 
         try {
+            // Get token from cookies
+            const token = document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
+            if (!token) {
+                throw new Error('No authentication token found');
+            }
+
             this.socket = io(socketUrl, {
                 auth: { token },
                 reconnection: true,
@@ -63,9 +69,7 @@ class SocketManager {
             this.isConnected = false;
             this.emit('disconnect', reason);
             
-            // Handle specific disconnect reasons
             if (reason === 'io server disconnect') {
-                // Server initiated disconnect, try to reconnect
                 this.socket.connect();
             }
         });
@@ -95,44 +99,44 @@ class SocketManager {
         });
 
         // Room events
-        this.socket.on('room:joined', (room) => {
+        this.socket.on('room-joined', (room) => {
             this.currentRoom = room;
-            this.emit('room:joined', room);
+            this.emit('room-joined', room);
         });
 
-        this.socket.on('room:left', (roomId) => {
+        this.socket.on('room-left', (roomId) => {
             if (this.currentRoom?.id === roomId) {
                 this.currentRoom = null;
             }
-            this.emit('room:left', roomId);
+            this.emit('room-left', roomId);
+        });
+
+        this.socket.on('user-entered', (userData) => {
+            this.emit('user-entered', userData);
+        });
+
+        this.socket.on('user-left', (userData) => {
+            this.emit('user-left', userData);
         });
 
         // Message events
-        this.socket.on('message:received', (message) => {
-            this.emit('message:received', message);
+        this.socket.on('message-received', (message) => {
+            this.emit('message-received', message);
         });
 
         // Code events
-        this.socket.on('code:updated', (update) => {
-            this.emit('code:updated', update);
+        this.socket.on('code-updated', (update) => {
+            this.emit('code-updated', update);
         });
 
         // Avatar events
-        this.socket.on('avatar:moved', (update) => {
-            this.emit('avatar:moved', update);
+        this.socket.on('avatar-moved', (update) => {
+            this.emit('avatar-moved', update);
         });
 
-        // Call events
-        this.socket.on('call:received', (data) => {
-            this.emit('call:received', data);
-        });
-
-        this.socket.on('call:answered', (data) => {
-            this.emit('call:answered', data);
-        });
-
-        this.socket.on('ice:candidate', (data) => {
-            this.emit('ice:candidate', data);
+        // Error events
+        this.socket.on('room-error', (error) => {
+            this.emit('error', error);
         });
     }
 
@@ -146,7 +150,6 @@ class SocketManager {
                 return;
             }
 
-            // Set up a one-time listener for the response
             const handleJoinResponse = (response) => {
                 if (response.error) {
                     reject(new Error(response.error));
@@ -155,21 +158,18 @@ class SocketManager {
                 }
             };
 
-            // Set up a one-time listener for errors
             const handleError = (error) => {
                 reject(error);
             };
 
-            this.socket.once('join-room-response', handleJoinResponse);
+            this.socket.once('room-joined', handleJoinResponse);
             this.socket.once('room-error', handleError);
 
-            // Emit the join event
             this.socket.emit('join-room', roomId, (response) => {
-                // Remove the listeners after getting the response
-                this.socket.off('join-room-response', handleJoinResponse);
+                this.socket.off('room-joined', handleJoinResponse);
                 this.socket.off('room-error', handleError);
 
-                if (response.error) {
+                if (response?.error) {
                     reject(new Error(response.error));
                 } else {
                     resolve(response);
@@ -180,65 +180,34 @@ class SocketManager {
 
     leaveRoom(roomId) {
         if (!this.isConnected) return false;
-        this.socket.emit('room:leave', roomId);
+        this.socket.emit('leave-room', roomId);
         return true;
     }
 
-    // Message operations
     sendMessage(roomId, message) {
         if (!this.isConnected) {
             this.emit('error', 'Cannot send message: Not connected to socket');
             return false;
         }
-        this.socket.emit('message:send', { roomId, message });
+        this.socket.emit('send-message', { roomId, message });
         return true;
     }
 
-    // Code operations
     updateCode(roomId, code, language) {
         if (!this.isConnected) {
             this.emit('error', 'Cannot update code: Not connected to socket');
             return false;
         }
-        this.socket.emit('code:update', { roomId, code, language });
+        this.socket.emit('code-update', { roomId, code, language });
         return true;
     }
 
-    // Avatar operations
     moveAvatar(roomId, x, y, direction) {
         if (!this.isConnected) {
             this.emit('error', 'Cannot move avatar: Not connected to socket');
             return false;
         }
-        this.socket.emit('avatar:move', { roomId, x, y, direction });
-        return true;
-    }
-
-    // Call operations
-    initiateCall(roomId, targetUserId, offer) {
-        if (!this.isConnected) {
-            this.emit('error', 'Cannot initiate call: Not connected to socket');
-            return false;
-        }
-        this.socket.emit('call:initiate', { roomId, targetUserId, offer });
-        return true;
-    }
-
-    answerCall(roomId, targetUserId, answer) {
-        if (!this.isConnected) {
-            this.emit('error', 'Cannot answer call: Not connected to socket');
-            return false;
-        }
-        this.socket.emit('call:answer', { roomId, targetUserId, answer });
-        return true;
-    }
-
-    sendIceCandidate(roomId, targetUserId, candidate) {
-        if (!this.isConnected) {
-            this.emit('error', 'Cannot send ICE candidate: Not connected to socket');
-            return false;
-        }
-        this.socket.emit('ice:candidate', { roomId, targetUserId, candidate });
+        this.socket.emit('avatar-move', { roomId, x, y, direction });
         return true;
     }
 

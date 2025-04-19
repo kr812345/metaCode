@@ -12,7 +12,6 @@ const { verifyUserMiddleware } = require('./middleware/userAuth');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user.model');
 const Room = require('./models/room.model');
-const CodeSession = require('./models/codeSession');
 
 const app = express();
 const server = http.createServer(app);
@@ -34,7 +33,20 @@ const logger = winston.createLogger({
 });
 
 // Security Middleware
-app.use(helmet()); // Adds various HTTP headers for security
+app.use(helmet({
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    crossOriginOpenerPolicy: { policy: "unsafe-none" },
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            connectSrc: ["'self'", process.env.FRONTEND_URL || 'http://localhost:3000'],
+            frameSrc: ["'self'"],
+            scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+            styleSrc: ["'self'", "'unsafe-inline'"],
+            imgSrc: ["'self'", "data:", "blob:"],
+        },
+    },
+}));
 app.use(compression()); // Compress response bodies
 
 // Rate Limiting
@@ -51,7 +63,9 @@ app.use('/api/', apiLimiter);
 app.use(cors({
     origin: process.env.FRONTEND_URL || 'http://localhost:3000',
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['set-cookie']
 }));
 
 app.use(express.json({ limit: '10kb' })); // Limit payload size
@@ -82,9 +96,19 @@ const getRandomColor = () => {
 
 const players = {}; // Global players tracking
 
-// Authentication Middleware for Socket.IO
+// Socket Authentication Middleware
 const socketAuthMiddleware = async (socket, next) => {
-    const token = socket.handshake.auth.token;
+    let token = socket.handshake.auth.token;
+
+    // If no token in auth, try cookies
+    if (!token && socket.handshake.headers.cookie) {
+        const cookies = socket.handshake.headers.cookie.split(';').reduce((acc, cookie) => {
+            const [key, value] = cookie.trim().split('=');
+            acc[key] = value;
+            return acc;
+        }, {});
+        token = cookies.token;
+    }
     
     if (!token) {
         logger.error('No authentication token provided');
@@ -225,7 +249,7 @@ const setupSocketEventHandlers = (socket) => {
     // Enhanced Chat Messaging
     socket.on("send-message", async (messageData) => {
         const { roomId, message } = messageData;
-        
+
         // Basic message validation
         if (!message || message.trim().length === 0) {
             logger.warn('Attempted to send empty message');
@@ -251,62 +275,47 @@ const setupSocketEventHandlers = (socket) => {
         }
     });
 
-    // WebRTC Signaling with Enhanced Error Handling
-    socket.on("call-user", (callData) => {
-        const { roomId, targetUserId, offer } = callData;
-        
-        if (!targetUserId || !offer) {
-            logger.warn('Invalid call initiation data');
-            return;
+    // Video Call Management
+    socket.on("video-state-changed", async ({ userId, isCameraOn }) => {
+        try {
+            const rooms = Array.from(socket.rooms);
+            rooms.forEach(roomId => {
+                if (roomId !== socket.id) {
+                    socket.to(roomId).emit("remote-video-state-changed", {
+                        userId,
+                        isCameraOn
+                    });
+                }
+            });
+            logger.info(`Video state changed for user ${socket.user.name}: camera ${isCameraOn ? 'on' : 'off'}`);
+        } catch (error) {
+            logger.error('Error handling video state change', { error: error.message });
         }
-
-        // Signal call to target user
-        socket.to(targetUserId).emit("incoming-call", {
-            roomId,
-            fromUserId: socket.user._id,
-            fromUserName: socket.user.name,
-            fromUserAvatar: socket.user.avatar,
-            offer
-        });
-
-        logger.info(`Call initiated from ${socket.user.name} to ${targetUserId}`);
     });
 
-    socket.on("call-answer", (answerData) => {
-        const { roomId, targetUserId, answer } = answerData;
-        
-        if (!targetUserId || !answer) {
-            logger.warn('Invalid call answer data');
-            return;
+    // Leave Room Handling
+    socket.on("leave-room", async (roomId) => {
+        try {
+            // Update user status
+            await User.findByIdAndUpdate(socket.user._id, { 
+                currentRoom: null,
+                status: 'online',
+                lastActive: new Date()
+            });
+
+            // Notify room about user leaving
+            socket.to(roomId).emit("user-left", {
+                userId: socket.user._id,
+                name: socket.user.name
+            });
+
+            // Leave the socket.io room
+            socket.leave(roomId);
+
+            logger.info(`User ${socket.user.name} left room ${roomId}`);
+        } catch (error) {
+            logger.error('Error leaving room', { error: error.message });
         }
-
-        // Signal answer back to caller
-        socket.to(targetUserId).emit("call-answered", {
-            roomId,
-            fromUserId: socket.user._id,
-            answer
-        });
-
-        logger.info(`Call answered in room ${roomId}`);
-    });
-
-    // Handle ICE candidates for WebRTC
-    socket.on("ice-candidate", (candidateData) => {
-        const { roomId, targetUserId, candidate } = candidateData;
-        
-        if (!targetUserId || !candidate) {
-            logger.warn('Invalid ICE candidate data');
-            return;
-        }
-
-        // Forward ICE candidate to the target user
-        socket.to(targetUserId).emit("ice-candidate", {
-            roomId,
-            fromUserId: socket.user._id,
-            candidate
-        });
-
-        logger.debug(`ICE candidate sent from ${socket.user._id} to ${targetUserId}`);
     });
 
     // Disconnect Handling with Comprehensive Cleanup
@@ -364,13 +373,13 @@ app.use((err, req, res, next) => {
 });
 
 // Protected route example
-app.get('/api/protected', verifyUserMiddleware, (req, res) => {
-    res.status(200).json({ 
-        success: true, 
-        message: 'You have access to protected route',
-        user: req.user
-    });
-});
+// app.get('/api/protected', verifyUserMiddleware, (req, res) => {
+//     res.status(200).json({ 
+//         success: true, 
+//         message: 'You have access to protected route',
+//         user: req.user
+//     });
+// });
 
 // Routes
 const authRoutes = require('./routes/auth.routes');

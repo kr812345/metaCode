@@ -7,30 +7,18 @@ const User = require('../models/user.model');
  */
 const register = async (req, res) => {
     try {
-        console.log('\n=== Registration Debug ===');
-        console.log('Request body:', req.body);
-        
         const { 
             name, 
             email, 
-            password, 
-            skills = [], 
-            socialLinks = {},
-            avatar = {} 
+            password,
+            avatar = {
+                name: 'Default Avatar',
+                color: '#3498db'
+            }
         } = req.body;
-
-        console.log('Extracted fields:', { 
-            name, 
-            email, 
-            password: '***', 
-            skills, 
-            socialLinks,
-            avatar 
-        });
 
         // Validate input
         if (!name || !email || !password) {
-            console.log('Missing required fields');
             return res.status(400).json({ 
                 success: false,
                 message: "Please provide all required fields" 
@@ -39,13 +27,10 @@ const register = async (req, res) => {
 
         // Normalize email
         const normalizedEmail = email.toLowerCase();
-        console.log('Normalized email:', normalizedEmail);
 
         // Check if user already exists
-        console.log('Checking for existing user...');
         const existingUser = await User.findOne({ email: normalizedEmail });
         if (existingUser) {
-            console.log('User already exists:', existingUser.email);
             return res.status(400).json({ 
                 success: false,
                 message: "User already exists" 
@@ -53,25 +38,16 @@ const register = async (req, res) => {
         }
 
         // Hash password
-        console.log('Hashing password...');
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
-        console.log('Password hashed successfully');
 
-        // Create new user with extended fields
-        console.log('Creating new user...');
+        // Create new user
         const user = new User({
             name,
             email: normalizedEmail,
             password: hashedPassword,
             role: 'user',
-            avatar: {
-                id: avatar.id || null,
-                name: avatar.name || 'Default Avatar',
-                color: avatar.color || '#3498db'
-            },
-            skills,
-            socialLinks,
+            avatar,
             status: 'offline',
             preferences: {
                 theme: 'light',
@@ -79,12 +55,9 @@ const register = async (req, res) => {
             }
         });
 
-        console.log('Saving user to database...');
         await user.save();
-        console.log('User saved successfully');
 
         // Create JWT token
-        console.log('Creating JWT token...');
         const token = jwt.sign(
             { 
                 user: user._id,
@@ -93,9 +66,6 @@ const register = async (req, res) => {
             process.env.JWT_SECRET_KEY,
             { expiresIn: '24h' }
         );
-        console.log('Token created successfully');
-
-        console.log('Registration successful, sending response');
         
         const cookieOptions = {
             httpOnly: true,
@@ -104,11 +74,10 @@ const register = async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000 // 24 hours
         };
 
-        // Set cookie using universalCookies if available
+        // Set cookie
         if (req.universalCookies) {
             req.universalCookies.set('token', token, cookieOptions);
-        } else if (req.headers['cookie']) {
-            // Fallback to using Cookie if universalCookies is not available
+        } else {
             const Cookie = require('cookie');
             const cookieHeader = Cookie.serialize('token', token, cookieOptions);
             res.setHeader('Set-Cookie', cookieHeader);
@@ -124,15 +93,11 @@ const register = async (req, res) => {
                 email: user.email,
                 role: user.role,
                 avatar: user.avatar,
-                skills: user.skills,
                 status: user.status
             }
         });
     } catch (error) {
-        console.error('\n=== Registration Error ===');
-        console.error('Error details:', error);
-        console.error('Error message:', error.message);
-        console.error('Error stack:', error.stack);
+        console.error('Registration Error:', error);
         res.status(500).json({ 
             success: false,
             message: "Error registering user",

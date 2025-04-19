@@ -1,4 +1,4 @@
-const Room = require('../models/room.model');
+const roomModel = require('../models/room.model.js');
 
 // Create a new room
 const createRoom = async (req, res) => {
@@ -7,13 +7,14 @@ const createRoom = async (req, res) => {
         const userId = req.user.user; // From JWT token
 
         if (!name) {
-            return res.status(400).json({ 
+            res.status(400).json({ 
                 success: false,
                 message: "Room name is required" 
             });
+            return 0;
         }
 
-        const newRoom = new Room({
+        const newRoom = new roomModel({
             name,
             description,
             creator: userId,
@@ -39,11 +40,12 @@ const createRoom = async (req, res) => {
                 updatedAt: newRoom.updatedAt
             }
         });
+        return 0;
     } catch (error) {
         console.error('Create room error:', error);
-        res.status(500).json({ 
+        res.status(500).json({
             success: false,
-            message: "Error creating room" 
+            message: "Error creating room"
         });
     }
 };
@@ -52,14 +54,22 @@ const createRoom = async (req, res) => {
 const getRooms = async (req, res) => {
     try {
         const userId = req.user.user;
-        const rooms = await Room.find({ 
+        if (!userId) {
+            return res.status(400).json({
+                success: false,
+                message: "User ID is required"
+            });
+        }
+        const rooms = await roomModel.find({ 
             $or: [
                 { creator: userId },
                 { 'members.user': userId }
             ]
         })
+        .lean()
         .populate('creator', 'name email')
-        .populate('members.user', 'name email');
+        .populate('members.user', 'name email')
+        .exec();
 
         res.status(200).json({
             success: true,
@@ -70,6 +80,7 @@ const getRooms = async (req, res) => {
                 description: room.description,
                 creator: room.creator,
                 members: room.members,
+                inviteCode: room.inviteCode,
                 memberCount: room.memberCount,
                 createdAt: room.createdAt,
                 updatedAt: room.updatedAt
@@ -90,7 +101,9 @@ const joinRoom = async (req, res) => {
         const { roomId } = req.params;
         const userId = req.user.user;
 
-        const room = await Room.findById(roomId);
+        console.log([userId,roomId]);
+        const room = await roomModel.findById(roomId);
+        console.log(room);
         if (!room) {
             return res.status(404).json({ 
                 success: false,
@@ -99,14 +112,16 @@ const joinRoom = async (req, res) => {
         }
 
         // Skip membership check if user is the creator
-        if (room.creator.toString() !== userId.toString() && room.isMember(userId)) {
+        if (room.creator.toString() !== userId.toString() && room.members.some(member => member.user.toString() === userId.toString())) {
             return res.status(400).json({ 
                 success: false,
                 message: "Already a member of this room" 
             });
         }
 
-        await room.addMember(userId, 'viewer');
+        // Add member manually if addMember is not defined
+        room.members.push({ user: userId, role: 'viewer' });
+        await room.save();
 
         res.status(200).json({
             success: true,
@@ -117,6 +132,7 @@ const joinRoom = async (req, res) => {
                 description: room.description,
                 creator: room.creator,
                 members: room.members,
+                inviteCode: room.inviteCode,
                 memberCount: room.memberCount,
                 createdAt: room.createdAt,
                 updatedAt: room.updatedAt
@@ -131,13 +147,63 @@ const joinRoom = async (req, res) => {
     }
 };
 
+// Join a room using invite code
+const joinRoomByInvite = async (req, res) => {
+    try {
+        const { inviteCode } = req.params;
+        const userId = req.user.user;
+
+        const room = await roomModel.findOne({ inviteCode });
+        if (!room) {
+            return res.status(404).json({ 
+                success: false,
+                message: "Invalid invite code" 
+            });
+        }
+
+        // Check if user is already a member
+        if (room.members.some(member => member.user.toString() === userId.toString())) {
+            return res.status(400).json({ 
+                success: false,
+                message: "Already a member of this room" 
+            });
+        }
+
+        // Add member to room
+        room.members.push({ user: userId, role: 'viewer' });
+        await room.save();
+
+        res.status(200).json({
+            success: true,
+            message: "Joined room successfully",
+            room: {
+                id: room._id,
+                name: room.name,
+                description: room.description,
+                creator: room.creator,
+                members: room.members,
+                inviteCode: room.inviteCode,
+                memberCount: room.memberCount,
+                createdAt: room.createdAt,
+                updatedAt: room.updatedAt
+            }
+        });
+    } catch (error) {
+        console.error('Join room by invite error:', error);
+        res.status(500).json({ 
+            success: false,
+            message: "Error joining room" 
+        });
+    }
+};
+
 // Leave a room
 const leaveRoom = async (req, res) => {
     try {
         const { roomId } = req.params;
         const userId = req.user.user;
 
-        const room = await Room.findById(roomId);
+        const room = await roomModel.findById(roomId);
         if (!room) {
             return res.status(404).json({ 
                 success: false,
@@ -146,7 +212,7 @@ const leaveRoom = async (req, res) => {
         }
 
         // Check if user is a member
-        if (!room.isMember(userId)) {
+        if (!room.members.some(member => member.user.toString() === userId.toString())) {
             return res.status(400).json({ 
                 success: false,
                 message: "Not a member of this room" 
@@ -187,5 +253,6 @@ module.exports = {
     createRoom,
     getRooms,
     joinRoom,
-    leaveRoom
-}; 
+    leaveRoom,
+    joinRoomByInvite
+};

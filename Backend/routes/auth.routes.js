@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const { register, login, getUserDetails } = require('../controllers/auth.controller');
-const { verifyUserMiddleware } = require('../middleware/userAuth');
+const { validateRegister, validateLogin } = require('../middleware/validation');
+const { authenticateUser } = require('../middleware/userAuth');
 
 // Public routes
-router.post('/register', register);
-router.post('/login', login);
+router.post('/register', validateRegister, register);
+router.post('/login', validateLogin, login);
 
-// Protected routes
-router.get('/user', verifyUserMiddleware, getUserDetails);
 
-module.exports = router;
+module.exports = router; 

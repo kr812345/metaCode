@@ -14,7 +14,15 @@ export const SocketProvider = ({ children }) => {
     const [reconnectAttempts, setReconnectAttempts] = useState(0);
 
     useEffect(() => {
-        if (!user?.token) return;
+        if (!user?.token) {
+            if (socketManager) {
+                socketManager.disconnect();
+                setIsConnected(false);
+                setConnectionError(null);
+                setReconnectAttempts(0);
+            }
+            return;
+        }
 
         const handleConnect = () => {
             setIsConnected(true);
@@ -29,62 +37,16 @@ export const SocketProvider = ({ children }) => {
             toast.error(`Disconnected: ${reason}`);
         };
 
-        const handleConnectError = (error) => {
-            setIsConnected(false);
-            setConnectionError(error);
-            toast.error('Connection failed');
-        };
-
-        const handleReconnect = (attemptNumber) => {
-            setIsConnected(true);
-            setConnectionError(null);
-            setReconnectAttempts(0);
-            toast.success(`Reconnected after ${attemptNumber} attempts`);
-        };
-
-        const handleReconnectAttempt = (attemptNumber) => {
-            setReconnectAttempts(attemptNumber);
-            toast.info(`Attempting to reconnect (${attemptNumber}/5)`);
-        };
-
-        const handleReconnectError = (error) => {
-            toast.error(`Reconnection failed: ${error.message}`);
-        };
-
-        const handleReconnectFailed = () => {
-            toast.error('Failed to reconnect after multiple attempts');
-        };
-
-        const handleError = (error) => {
-            toast.error(error);
-        };
-
         // Connect to socket
         socketManager.connect(user.token);
 
         // Add event listeners
         const cleanupConnect = socketManager.on('connect', handleConnect);
         const cleanupDisconnect = socketManager.on('disconnect', handleDisconnect);
-        const cleanupError = socketManager.on('connect_error', handleConnectError);
-        const cleanupReconnect = socketManager.on('reconnect', handleReconnect);
-        const cleanupReconnectAttempt = socketManager.on('reconnect_attempt', handleReconnectAttempt);
-        const cleanupReconnectError = socketManager.on('reconnect_error', handleReconnectError);
-        const cleanupReconnectFailed = socketManager.on('reconnect_failed', handleReconnectFailed);
-        const cleanupErrorEvent = socketManager.on('error', handleError);
-
-        // Initial connection status
-        setIsConnected(socketManager.getConnectionStatus());
-        setReconnectAttempts(socketManager.getReconnectAttempts());
 
         return () => {
             cleanupConnect();
             cleanupDisconnect();
-            cleanupError();
-            cleanupReconnect();
-            cleanupReconnectAttempt();
-            cleanupReconnectError();
-            cleanupReconnectFailed();
-            cleanupErrorEvent();
             socketManager.disconnect();
         };
     }, [user?.token]);
@@ -177,4 +139,4 @@ export const useSocket = () => {
         throw new Error('useSocket must be used within a SocketProvider');
     }
     return context;
-}; 
+};

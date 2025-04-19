@@ -1,13 +1,13 @@
 'use client'
 
 import React, { useState, useMemo } from 'react';
-import Button from '@/components/Button';
-import Input from '@/components/Input';
-import Particles from '@/components/Particles';
+import Button from '../../components/Button';
+import Input from '../../components/Input';
+// import Particles from '../../components/Particles';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { postRequest } from '@/axiosReq/req.axios';
-import { useAuth } from '@/contexts/AuthContext';
+import { postRequest } from '../../axiosReq/req.axios';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
     const [fields, setField] = useState({
@@ -23,7 +23,7 @@ const Login = () => {
         e.preventDefault();
         setIsLoading(true);
         try {
-            const res = await postRequest('/api/auth/login', fields);
+            const res = await postRequest('/auth/login', fields);
             if (res && res.status === 200) {
                 const token = res.data?.token;
                 if (token) {
@@ -45,11 +45,11 @@ const Login = () => {
     };
 
     // Memoize the Particles component to prevent re-renders
-    const MemoizedParticles = useMemo(() => <Particles />, []);
+    // const MemoizedParticles = useMemo(() => <Particles />, []);
 
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
-            {MemoizedParticles}
+            {/* {MemoizedParticles} */}
             <div className="relative z-10 flex flex-col items-center justify-center h-screen">
                 <div className={`
                 bg-[#ffffff62] bg-opacity-60

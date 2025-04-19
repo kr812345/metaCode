@@ -1,23 +1,37 @@
 const mongoose = require('mongoose');
 
+const memberSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    role: {
+        type: String,
+        enum: ['owner', 'viewer', 'editor'],
+        default: 'viewer'
+    }
+}, { _id: false });
+
 const roomSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Room name is required'],
-        trim: true,
-        minlength: [3, 'Room name must be at least 3 characters long'],
-        maxlength: [50, 'Room name cannot exceed 50 characters']
+        required: true,
+        trim: true
     },
     description: {
         type: String,
-        trim: true,
-        maxlength: [500, 'Description cannot exceed 500 characters'],
-        default: ''
+        trim: true
     },
     creator: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: [true, 'Creator ID is required']
+        required: true
+    },
+    inviteCode: {
+        type: String,
+        unique: true,
+        default: () => Math.random().toString(36).substring(2, 10)
     },
     members: [{
         user: {
@@ -25,66 +39,41 @@ const roomSchema = new mongoose.Schema({
             ref: 'User',
             required: true
         },
-        joinedAt: {
-            type: Date,
-            default: Date.now
-        },
         role: {
             type: String,
-            enum: ['owner', 'editor', 'viewer'],
+            enum: ['owner', 'viewer', 'editor'],
             default: 'viewer'
         }
     }],
-    code: {
+    isPrivate: {
+        type: Boolean,
+        default: false
+    },
+    password: {
         type: String,
-        default: '',
-        maxlength: [100000, 'Code content cannot exceed 100,000 characters']
+        trim: true
+    },
+    maxParticipants: {
+        type: Number,
+        default: 10
+    },
+    status: {
+        type: String,
+        enum: ['active', 'inactive', 'deleted'],
+        default: 'active'
+    },
+    codeSession: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'CodeSession'
     }
 }, {
-    timestamps: true,
-    toJSON: { virtuals: true },
-    toObject: { virtuals: true }
+    timestamps: true
 });
 
-// Indexes for better query performance
+// Index for faster queries
 roomSchema.index({ name: 'text', description: 'text' });
 roomSchema.index({ creator: 1 });
-roomSchema.index({ 'members.user': 1 });
+roomSchema.index({ status: 1 });
 
-// Virtual for member count
-roomSchema.virtual('memberCount').get(function() {
-    return this.members.length;
-});
-
-// Method to add a member to the room
-roomSchema.methods.addMember = async function(userId, role = 'viewer') {
-    if (!this.members.some(member => member.user.toString() === userId.toString())) {
-        this.members.push({
-            user: userId,
-            role: role
-        });
-        return await this.save();
-    }
-    return this;
-};
-
-// Method to remove a member from the room
-roomSchema.methods.removeMember = async function(userId) {
-    this.members = this.members.filter(member => member.user.toString() !== userId.toString());
-    return await this.save();
-};
-
-// Method to check if a user is a member
-roomSchema.methods.isMember = function(userId) {
-    return this.members.some(member => member.user.toString() === userId.toString());
-};
-
-// Method to get member role
-roomSchema.methods.getMemberRole = function(userId) {
-    const member = this.members.find(member => member.user.toString() === userId.toString());
-    return member ? member.role : null;
-};
-
-const Room = mongoose.model('Room', roomSchema);
-
-module.exports = Room; 
+ 
+module.exports = mongoose.model('Room', roomSchema);

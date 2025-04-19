@@ -1,58 +1,49 @@
 const jwt = require('jsonwebtoken');
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config();
 
 const verifyUserMiddleware = (req, res, next) => {
-    console.log('\n=== Token Verification Debug ===');
-    console.log('Request URL:', req.url);
-    console.log('Request Method:', req.method);
-    console.log('All Headers:', JSON.stringify(req.headers, null, 2));
+    let token;
     
-    const authHeader = req.headers['authorization'];
-    console.log('\nAuthorization Header:', authHeader);
-    
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-        console.log('No Bearer token found in Authorization header');
-        return res.status(401).json({ 
-            success: false,
-            message: "No access token provided" 
-        });
+    // Try getting token from cookie first
+    if (req.cookies && req.cookies.token) {
+        token = req.cookies.token;
     }
-
-    const token = authHeader.split(' ')[1];
-    console.log('\nExtracted Token:', token);
+    // Fall back to Bearer token in Authorization header
+    else {
+        const authHeader = req.headers['authorization'];
+        if (!authHeader || !authHeader.startsWith('Bearer ')) {
+            return res.status(401).json({ 
+                success: false,
+                message: "No access token provided" 
+            });
+        }
+        token = authHeader.split(' ')[1];
+    }
     
     try {
-        console.log('\nJWT_SECRET_KEY:', process.env.JWT_SECRET_KEY);
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-        console.log('Successfully decoded token:', JSON.stringify(decoded, null, 2));
 
-        if (!decoded) {
-            console.log('Token decoded but empty');
+        if (!decoded || !decoded.user) {
             return res.status(401).json({ 
                 success: false,
                 message: "Invalid token" 
             });
         }
 
-        // Store decoded user info in req.user
         req.user = { 
             user: decoded.user,
             isVerified: decoded.isVerified 
         };
         
         if (!decoded.isVerified) {
-            console.log('Token decoded but user not verified');
             return res.status(401).json({ 
                 success: false,
-                message: "Invalid token" 
+                message: "User not verified" 
             });
         }
-        console.log(req.user);
-        console.log('\nAuthentication successful, proceeding to next middleware');
+
         next();
     } catch (err) {
-        console.error('\nToken verification error:', err.message);
-        console.error('Error stack:', err.stack);
         return res.status(401).json({ 
             success: false,
             message: "Invalid token" 
@@ -60,6 +51,4 @@ const verifyUserMiddleware = (req, res, next) => {
     }
 };
 
-module.exports = {
-    verifyUserMiddleware
-};
+module.exports = verifyUserMiddleware;

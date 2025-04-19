@@ -15,46 +15,53 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const token = cookies.token;
         if (token) {
-            // You can add a function here to fetch user data if needed
             setUser({ token });
         }
         setIsLoading(false);
     }, [cookies.token]);
 
     const login = (token) => {
-        setCookie('token', token, { path: '/', maxAge: 7200 });
+        // Set cookie with secure options
+        setCookie('token', token, {
+            path: '/',
+            maxAge: 7200, // 2 hours
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'strict'
+        });
         setUser({ token });
     };
 
-    const logout = () => {
+    const logout = async () => {
         try {
-            // Remove token from cookies
-            removeCookie('token', { path: '/' });
+            // Clear token cookie with all security options
+            removeCookie('token', { 
+                path: '/',
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: 'strict'
+            });
             
             // Clear user state
             setUser(null);
             
-            // Clear localStorage
-            localStorage.removeItem('token');
-            localStorage.removeItem('roomId');
-            localStorage.removeItem('roomName');
+            // Clean up localStorage
+            localStorage.clear();
             
-            // Disconnect socket if it exists
-            if (window.socket) {
-                window.socket.disconnect();
-            }
-            
-            // Redirect to login page
-            router.push('/login');
+            // Remove any session data
+            sessionStorage.clear();
+
+            return true;
         } catch (error) {
             console.error('Logout error:', error);
-            // Even if there's an error, still try to redirect
-            router.push('/login');
+            throw error;
         }
     };
 
+    const getToken = () => {
+        return cookies.token;
+    };
+
     return (
-        <AuthContext.Provider value={{ user, login, logout, isLoading }}>
+        <AuthContext.Provider value={{ user, login, logout, getToken, isLoading }}>
             {children}
         </AuthContext.Provider>
     );
@@ -66,4 +73,4 @@ export const useAuth = () => {
         throw new Error('useAuth must be used within an AuthProvider');
     }
     return context;
-}; 
+};

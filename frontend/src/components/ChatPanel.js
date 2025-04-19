@@ -41,7 +41,7 @@ const ChatPanel = ({ messages, onSendMessage, roomMembers = [] }) => {
     console.log('Room members in ChatPanel:', roomMembers);
 
     return (
-        <div className="h-full flex flex-col bg-[#0A2342] rounded-lg p-4">
+        <div className="h-[90vh] w-[25vw] float-right flex flex-col bg-[#0A2342] rounded-lg p-4">
             <h3 className="text-xl font-bold text-[#0DF2FF] mb-4">Chat</h3>
             
             {/* Member list */}
@@ -66,7 +66,7 @@ const ChatPanel = ({ messages, onSendMessage, roomMembers = [] }) => {
             </div>
             
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto mb-4 bg-[#0A0F1E] rounded-lg p-3">
+            <div className="flex-1 h-[80vh] overflow-y-scroll no-scrollbar mb-4 bg-[#0A0F1E] rounded-lg p-3">
                 {messages.length === 0 ? (
                     <div className="text-gray-400 text-center mt-4">
                         No messages yet. Start the conversation!

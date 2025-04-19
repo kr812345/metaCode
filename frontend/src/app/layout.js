@@ -1,13 +1,12 @@
 'use client';
-
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import CookieProviderWrapper from '@/components/CookieProviderWrapper';
-import { AuthProvider } from '@/contexts/AuthContext';
-import { SocketProvider } from '@/contexts/SocketContext';
-import { RoomProvider } from '@/contexts/RoomContext';
-import { VideoCallProvider } from '@/contexts/VideoCallContext';
+import { AuthProvider } from '../contexts/AuthContext';
+import { SocketProvider } from '../contexts/SocketContext';
+import { RoomProvider } from '../contexts/RoomContext';
+import { VideoCallProvider } from '../contexts/VideoCallContext';
 import { Toaster } from 'react-hot-toast';
+import { CookiesProvider } from 'react-cookie';
+import './globals.css'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,12 +18,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Toaster position="top-right" />
-        <CookieProviderWrapper>
+        <CookiesProvider>
           <AuthProvider>
             <SocketProvider>
               <RoomProvider>
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
               </RoomProvider>
             </SocketProvider>
           </AuthProvider>
-        </CookieProviderWrapper>
+        </CookiesProvider>
       </body>
     </html>
   );
