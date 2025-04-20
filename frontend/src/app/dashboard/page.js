@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useMemo } from 'react';
-// import Particles from '@/components/Particles';
+import Particles from '@/components/Particles';
 import Link from 'next/link';
 import HomeIcon from '../../../public/home.svg'; 
 import Image from 'next/image';
@@ -77,11 +77,11 @@ const Dashboard = () => {
         }
     };
 
-    // const memoizedParticles = useMemo(() => <Particles />, []);
+    const memoizedParticles = useMemo(() => <Particles />, []);
 
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
-            {/* {memoizedParticles} */}
+            {memoizedParticles}
             <div className="relative z-10">
                 <header className="fixed w-full bg-[#1e3d9a] bg-opacity-60 border-3 backdrop-blur-lg border-[#0DF2FF] p-4">
                     <div className="container mx-auto flex justify-between items-center">

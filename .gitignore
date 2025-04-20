@@ -1,1 +1,26 @@
 .qodo
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies and build artifacts
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db

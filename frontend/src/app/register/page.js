@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Button from '@/components/Button';
 import Input from '@/components/Input';
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { postRequest } from '@/axiosReq/req.axios';
 import { useAuth } from '@/contexts/AuthContext';
+import Particles from '@/components/Particles';
 
 const Register = () => {
     const [fields, setField] = useState({
@@ -50,11 +51,14 @@ const Register = () => {
         }
     };
 
+    const MemoizedParticles = useMemo(() => <Particles />, []);
+
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
-            <div className='text-[#0DF2FF] text-center mt-8 ml-8 absolute font-bold text-2xl'>
+            <div className='z-10 text-[#0DF2FF] text-center mt-8 ml-8 absolute font-bold text-2xl'>
                         metaCode
             </div> 
+            {MemoizedParticles}
             <div className="relative z-10 flex flex-col items-center justify-center h-screen">
                 <div className={`
                     bg-[#ffffff62]

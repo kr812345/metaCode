@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
-// import Particles from '../../components/Particles';
+import Particles from '../../components/Particles';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { postRequest } from '../../axiosReq/req.axios';
@@ -45,14 +45,14 @@ const Login = () => {
     };
 
     // Memoize the Particles component to prevent re-renders
-    // const MemoizedParticles = useMemo(() => <Particles />, []);
+    const MemoizedParticles = useMemo(() => <Particles />, []);
 
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
-                <div className='text-[#0DF2FF] text-center mt-16 left-0 right-0 absolute font-bold text-2xl'>
+                <div className='z-10 text-[#0DF2FF] text-center mt-16 left-0 right-0 absolute font-bold text-2xl'>
                         metaCode
                 </div>  
-            {/* {MemoizedParticles} */}
+            {MemoizedParticles}
             <div className="relative z-10 flex flex-col items-center justify-center h-screen">
                 <div className={`
                 bg-white bg-opacity-50 backdrop-filter border-2 border-[#0DF2FF] backdrop-blur-lg rounded-2xl py-8 px-4 w-[344px]`}>
