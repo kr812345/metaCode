@@ -40,7 +40,7 @@ const CreateRoom = ({ onClose }) => {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-[#ffffff62] bg-opacity-60 border-3 border-[#0DF2FF] rounded-xl p-6 w-full max-w-md">
+            <div className="bg-[#0A0F1E] border-3 border-[#0DF2FF] rounded-xl p-6 w-full max-w-md">
                 <h2 className="text-2xl font-bold text-white mb-4">Create New Room</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
@@ -50,7 +50,7 @@ const CreateRoom = ({ onClose }) => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-gray-700 border border-[#0DF2FF] focus:outline-none focus:border-[#FF007A]"
+                            className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white border border-[#0DF2FF] focus:outline-none focus:border-[#FF007A]"
                             required
                         />
                     </div>
@@ -60,7 +60,7 @@ const CreateRoom = ({ onClose }) => {
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
-                            className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-gray-800 border border-[#0DF2FF] focus:outline-none focus:border-[#FF007A]"
+                            className="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 text-white border border-[#0DF2FF] focus:outline-none focus:border-[#FF007A]"
                             rows="3"
                             required
                         />

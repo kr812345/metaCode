@@ -31,7 +31,6 @@ const room = () => {
             <div className='relative w-full h-162 flex rounded-lg gap-2'>
                 <Environment/>
             </div>
-            {showChat && <ChatBox />}
             {showGame && (
                 <div className='absolute top-0 right-0 w-1/3 h-full bg-[#1e1e1e] rounded-lg overflow-hidden'>
                     <SnakeGame />

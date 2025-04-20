@@ -6,6 +6,7 @@ import { useSocket } from '@/contexts/SocketContext';
 import { useRoom } from '@/contexts/RoomContext';
 import toast from 'react-hot-toast';
 import dynamic from 'next/dynamic';
+import ChatPanel from '@/components/ChatPanel';
 
 // Import components with dynamic imports to avoid window is not defined error
 const CodeEditor = dynamic(() => import('../../../components/CodeEditor'), { ssr: false });
@@ -22,14 +23,17 @@ const CodeEditorPage = () => {
         socket,
         isConnected,
         joinRoom,
+        sendMessage,
         updateCode,
         addListener
     } = useSocket();
 
     // State management
+    const [messages, setMessages] = useState([]);
     const [roomMembers, setRoomMembers] = useState([]);
     const [currentCode, setCurrentCode] = useState('');
     const [isClient, setIsClient] = useState(false);
+    const [isChatOpen, setIsChatOpen] = useState(false);
 
     useEffect(() => {
         setIsClient(true);
@@ -76,9 +80,29 @@ const CodeEditorPage = () => {
         router.push(`/room/${roomId}`);
     };
 
-    if (!isClient) {
-        return null;
-    }
+    const handleToggleChat = () => {
+        setIsChatOpen(prev => !prev);
+    };
+
+    const handleSendMessage = (message) => {
+        if (!message.trim()) return;
+        
+        // Construct the message object
+        const messageObj = {
+            userId: user.id,
+            username: user.username || user.name,
+            message, 
+            timestamp: new Date().toISOString()
+        };
+        
+        // Send via socket
+        sendMessage(roomId, message);
+        
+        // Optimistically add message to list
+        setMessages(prev => [...prev, messageObj]);
+    };
+
+    
 
     return (
         <div className="min-h-screen bg-[#0A0F1E]">
@@ -94,10 +118,17 @@ const CodeEditorPage = () => {
                         />
                     </div>
 
+                    {isChatOpen ? <ChatPanel
+                                messages={messages}
+                                onSendMessage={handleSendMessage}
+                                roomMembers={roomMembers}
+                            /> : ""}
+
                     {/* Bottom Bar */}
                     <div className="mt-2">
                         <BottomBar
                             onLeaveRoom={handleLeaveEditor}
+                            toggleChat={handleToggleChat} // Pass the handler here
                         />
                     </div>
                 </div>

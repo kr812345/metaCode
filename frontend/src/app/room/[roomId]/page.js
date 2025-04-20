@@ -156,15 +156,15 @@ const RoomPage = () => {
                 <div className="flex-1 flex">
                     {/* 2D Environment */}
                     <div className="flex-1 flex flex-col">
+                        <AvatarManager
+                            position={avatarPosition}
+                            onAvatarMove={handleAvatarMove}
+                            members={roomMembers}
+                            roomId={roomId}
+                            user={user}
+                        />
                         {activePanel === 'avatar' ? (
-                            <AvatarManager
-                                position={avatarPosition}
-                                onAvatarMove={handleAvatarMove}
-                                members={roomMembers}
-                                roomId={roomId}
-                                user={user}
-                            />
-                        ) : (
+                        <></>) : (
                             <ChatPanel
                                 messages={messages}
                                 onSendMessage={handleSendMessage}

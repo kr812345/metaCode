@@ -49,13 +49,13 @@ const Login = () => {
 
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
+                <div className='text-[#0DF2FF] text-center mt-16 left-0 right-0 absolute font-bold text-2xl'>
+                        metaCode
+                </div>  
             {/* {MemoizedParticles} */}
             <div className="relative z-10 flex flex-col items-center justify-center h-screen">
                 <div className={`
-                bg-[#ffffff62] bg-opacity-60
-                border-3 border-[#0DF2FF] 
-                rounded-2xl py-8 px-4 
-                w-[344px]`}>
+                bg-white bg-opacity-50 backdrop-filter border-2 border-[#0DF2FF] backdrop-blur-lg rounded-2xl py-8 px-4 w-[344px]`}>
                     <h1 className="text-[#F4F5F7] text-3xl font-semibold mb-8 text-center">Login</h1>
                     <div className="mb-4">
                         <label className='text-[#F4F5F7] font-medium ml-2 block mb-1'>Email</label>
@@ -85,15 +85,17 @@ const Login = () => {
                         </div>
                     )}
 
+                    <div className='w-full flex'>
                     <Button 
                         text={isLoading ? 'Logging in...' : 'Login'} 
                         handle={handleSubmit}
                         type="submit"
-                    />
+                        />
+                    </div>    
 
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-16">
                         <span className="text-[#F4F5F7]">Don't have an account? </span>
-                        <Link href="/register" className="text-[#FF007A] hover:underline">
+                        <Link href="/register" className="text-[#ff007a] border-2 border-[#FF007A] rounded-md px-3 py-2 hover:bg-pink-400 hover:text-white transition">
                             Register
                         </Link>
                     </div>

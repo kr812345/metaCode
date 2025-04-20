@@ -83,18 +83,18 @@ const Dashboard = () => {
         <div className='bg-[#0A0F1E] relative min-h-screen'>
             {/* {memoizedParticles} */}
             <div className="relative z-10">
-                <header className="bg-[#ffffff62] bg-opacity-60 border-3 border-[#0DF2FF] p-4">
+                <header className="fixed w-full bg-[#1e3d9a] bg-opacity-60 border-3 backdrop-blur-lg border-[#0DF2FF] p-4">
                     <div className="container mx-auto flex justify-between items-center">
                         <Link href="/" className="flex items-center">
-                            <Image src={HomeIcon} alt="Home" width={24} height={24} />
+                        <h1 className='text-[#0DF2FF] text-center font-bold text-2xl'> metaCode </h1> 
                         </Link>
                         <button onClick={handleLogout} className="flex items-center">
-                            <Image src={LogoutIcon} alt="Logout" width={24} height={24} />
+                            <Image src={LogoutIcon} alt="Logout" width={28} height={28} />
                         </button>
                     </div>
                 </header>
 
-                <main className="container mx-auto p-4">
+                <main className="container mx-auto p-4 pt-20">
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-2xl font-bold text-white">Your Rooms</h1>
                         <div className="flex gap-2">
@@ -116,7 +116,7 @@ const Dashboard = () => {
                     {isLoading ? (
                         <div className="text-white text-center">Loading rooms...</div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4">
                             {rooms.map((room) => (
                                 <SpaceCard key={room.id} room={room} />
                             ))}

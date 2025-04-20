@@ -12,7 +12,8 @@ import cameraOff from '../../public/cameraOff.svg';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { useVideoCall } from '../contexts/VideoCallContext';
-import { useRoom } from '@/contexts/RoomContext';
+import { useRoom } from '../contexts/RoomContext';
+import user from '../../public/user.svg';
 
 const BottomBar = ({ toggleChat, onLeaveRoom }) => {
     const [usersOnline, setUsersOnline] = useState(1);
@@ -66,15 +67,18 @@ const BottomBar = ({ toggleChat, onLeaveRoom }) => {
             .catch(() => toast.error('Failed to copy invite link'));
     };
 
+    // Get username from localStorage or context if available
+    const username = typeof window !== 'undefined' ? localStorage.getItem('name') || 'Username' : 'Username';
+
     return (
-        <div className='w-full h-12 bg-[#0C1738] rounded-lg flex justify-between items-center px-4 transition shadow-[0px_0px_5px_rgba(72,70,70,1)]'>
+        <div className='w-full h-12 -mt-2 bg-[#0C1738] rounded-lg flex justify-between items-center px-4 transition shadow-[0px_0px_5px_rgba(72,70,70,1)]'>
             <div className='flex items-center gap-4'>
                 <div className='text-[#0DF2FF] font-bold text-xl'>
                     metaCode
                 </div>
                 <div className='flex items-center gap-2'>
-                    <div className='w-8 h-8 rounded-full bg-gray-600'></div>
-                    <span className='text-white'>Username</span>
+                    <div className='w-8 h-8 rounded-full bg-gray-500 flex justify-center'><Image src={user} alt='..'/></div>
+                    <span className='text-white'>{username}</span>
                 </div>
                 <div className='flex gap-3'>
                     <button 

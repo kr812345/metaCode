@@ -52,10 +52,13 @@ const Register = () => {
 
     return (
         <div className='bg-[#0A0F1E] relative min-h-screen'>
+            <div className='text-[#0DF2FF] text-center mt-8 ml-8 absolute font-bold text-2xl'>
+                        metaCode
+            </div> 
             <div className="relative z-10 flex flex-col items-center justify-center h-screen">
                 <div className={`
-                    bg-[#ffffff62] bg-opacity-60
-                    border-3 border-[#0DF2FF] 
+                    bg-[#ffffff62]
+                    border-2 border-[#0DF2FF] 
                     rounded-2xl py-8 px-4 
                     w-[344px]
                 `}>
@@ -100,16 +103,18 @@ const Register = () => {
                         </div>
                     )}
 
-                    <Button 
-                        text={isLoading ? 'Registering...' : 'Register'} 
-                        handle={handleSubmit}
-                        type="submit"
-                        disabled={isLoading}
-                    />
+                    <div className='w-full flex'>
+                        <Button 
+                            text={isLoading ? 'Registering...' : 'Register'} 
+                            handle={handleSubmit}
+                            type="submit"
+                            disabled={isLoading}
+                            />
+                    </div>
 
-                    <div className="text-center mt-4">
+                    <div className="text-center mt-16">
                         <span className="text-[#F4F5F7]">Already have an account? </span>
-                        <Link href="/login" className="text-[#FF007A] hover:underline">
+                        <Link href="/login" className="text-[#dedede] border-2 border-[#FF007A] rounded-md px-3 py-2 hover:underline">
                             Login
                         </Link>
                     </div>

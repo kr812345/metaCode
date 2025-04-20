@@ -27,9 +27,11 @@ const SpaceCard = ({ room }) => {
     };
 
     return (
-        <div className="bg-[#ffffff62] bg-opacity-60 border-3 border-[#0DF2FF] rounded-xl p-4">
+        <div className="bg-[#ffffff62] bg-opacity-60 flex flex-col justify-between border-2 h-48 border-[#0DF2FF] rounded-xl p-4">
+            <div className=''>
             <h3 className="text-xl font-semibold text-white mb-2">{room.name}</h3>
             <p className="text-gray-300 mb-4">{room.description}</p>
+            </div>
             <button
                 onClick={handleRoomJoin}
                 className="w-full bg-[#FF007A] text-white px-4 py-2 rounded-lg hover:bg-[#ff7aba] transition"

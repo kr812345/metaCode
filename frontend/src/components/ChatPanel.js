@@ -41,7 +41,7 @@ const ChatPanel = ({ messages, onSendMessage, roomMembers = [] }) => {
     console.log('Room members in ChatPanel:', roomMembers);
 
     return (
-        <div className="h-[90vh] w-[25vw] float-right flex flex-col bg-[#0A2342] rounded-lg p-4">
+        <div className="h-[85vh] w-[24vw] absolute right-4 mt-16 flex flex-col bg-[#0A2342] rounded-lg p-4">
             <h3 className="text-xl font-bold text-[#0DF2FF] mb-4">Chat</h3>
             
             {/* Member list */}

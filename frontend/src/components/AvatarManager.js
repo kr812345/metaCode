@@ -132,7 +132,7 @@ const AvatarManager = ({ roomId, user, members, onAvatarMove }) => {
                 router.push('/game');
             }
 
-            const speed = 200;
+            const speed = 300;
             let direction = 'idle';
 
             if (cursors.left.isDown) {
