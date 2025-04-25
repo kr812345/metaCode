@@ -30,7 +30,7 @@ export const SocketProvider = ({ children }) => {
                 if (!isMounted) return;
     
                 const socket = socketManager.getSocket();
-                console.log('✅ Socket connected:', socket?.id);
+                console.log('✅ Socket connected:', socket.user);
                 setIsConnected(true);
                 toast.success('Connected to server');
             } catch (err) {

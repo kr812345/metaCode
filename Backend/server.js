@@ -60,8 +60,18 @@ const apiLimiter = rateLimit({
 app.use('/api/', apiLimiter);
 
 // CORS Configuration
+allowedOrigins = [
+    process.env.FRONTEND_URL || 'http://localhost:3000',
+    'https://mallard-tidy-rhino.ngrok-free.app'
+]
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -137,17 +147,16 @@ const setupSocketEventHandlers = (socket) => {
     // Room Management
     socket.on("join-room", async (roomId) => {
         try {
-            const room = await Room.findById(roomId)
-                .populate('members', 'name avatar status');
+            const room = await Room.findById(roomId);
             
             if (!room) {
                 socket.emit("room-error", "Room not found");
                 logger.warn(`Attempt to join non-existent room: ${roomId}`);
                 return;
             }
-
+            // console.log(socket);
             // Check room capacity and permissions
-            if (room.members.length >= room.maxMembers) {
+            if (room.members.length >= room.maxParticipants) {
                 socket.emit("room-error", "Room is full");
                 logger.warn(`Room capacity exceeded: ${roomId}`);
                 return;
@@ -302,21 +311,29 @@ const setupSocketEventHandlers = (socket) => {
                 status: 'online',
                 lastActive: new Date()
             });
-
+    
             // Notify room about user leaving
             socket.to(roomId).emit("user-left", {
                 userId: socket.user._id,
                 name: socket.user.name
             });
-
-            // Leave the socket.io room
+    
+            // ✅ FIX: Use socket.user._id correctly
+            await Room.findByIdAndUpdate(
+                roomId,
+                {
+                    $pull: {
+                        members: socket.user._id
+                    }
+                });
+    
             socket.leave(roomId);
-
             logger.info(`User ${socket.user.name} left room ${roomId}`);
         } catch (error) {
             logger.error('Error leaving room', { error: error.message });
         }
     });
+    
 
     // Disconnect Handling with Comprehensive Cleanup
     socket.on("disconnect", async () => {

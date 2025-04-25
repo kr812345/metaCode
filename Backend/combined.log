@@ -978,3 +978,456 @@
 {"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T12:11:09.057Z"}
 {"level":"info","message":"New socket connection: R9wD2jITeMQoKgArAAAa","timestamp":"2025-04-25T12:51:08.269Z"}
 {"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:08.456Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T12:51:34.227Z"}
+{"level":"info","message":"New socket connection: RtqgSEV8f7NSiFgVAAAc","timestamp":"2025-04-25T12:51:34.472Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:36.812Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:36.872Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:37.025Z"}
+{"level":"info","message":"Message sent in room 680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:45.554Z"}
+{"level":"info","message":"Video state changed for user Garvit Gupta: camera off","timestamp":"2025-04-25T12:52:19.806Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T13:01:54.699Z"}
+{"level":"info","message":"New socket connection: BJUf3pSo35wbXXn7AAAe","timestamp":"2025-04-25T13:01:55.482Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.098Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.379Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.688Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:58.884Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:58.984Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:59.112Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.748Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.820Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.949Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:04:04.965Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:04:05.242Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:11.842Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:11.912Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:12.027Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:26:41.820Z"}
+{"level":"info","message":"New socket connection: lOEOUj0M5Oh-6738AAAB","timestamp":"2025-04-25T13:26:42.693Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:26:42.865Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:26:49.454Z"}
+{"level":"info","message":"New socket connection: D82QKO6rwyjOtPbcAAAB","timestamp":"2025-04-25T13:26:50.128Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:26:50.337Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:26:55.239Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:03.048Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:04.102Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:06.599Z"}
+{"level":"info","message":"New socket connection: owHXAuQhNu_L2TFeAAAB","timestamp":"2025-04-25T13:27:08.354Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:08.498Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:12.363Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:15.472Z"}
+{"level":"info","message":"New socket connection: knczNrsM-paltze_AAAB","timestamp":"2025-04-25T13:27:16.199Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:16.280Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:17.961Z"}
+{"level":"info","message":"New socket connection: O8XcP3J5VkZgrrE4AAAB","timestamp":"2025-04-25T13:27:18.935Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:19.016Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:37.136Z"}
+{"level":"info","message":"New socket connection: SgJBUCmZkMm6bXncAAAB","timestamp":"2025-04-25T13:27:37.943Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:38.034Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:27:45.050Z"}
+{"level":"info","message":"New socket connection: -wpKG3P503DCj0FLAAAB","timestamp":"2025-04-25T13:27:46.951Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:47.046Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:28:01.849Z"}
+{"level":"info","message":"New socket connection: cNZAr9OnGMzSHfOWAAAB","timestamp":"2025-04-25T13:28:03.664Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:28:03.762Z"}
+{"level":"info","message":"New socket connection: 1uTAsKkeRwL33mKRAAAD","timestamp":"2025-04-25T13:29:15.633Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.349Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.891Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.912Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.553Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.701Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.837Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:25.849Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:26.062Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:26.339Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:39.813Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:39.999Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:40.105Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T13:42:47.480Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:03.894Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:04.060Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:04.214Z"}
+{"level":"info","message":"New socket connection: B9GFknMmLCv4uejEAAAF","timestamp":"2025-04-25T13:46:26.954Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T13:55:32.388Z"}
+{"level":"info","message":"New socket connection: 5O44qfNkKKmKyLGiAAAH","timestamp":"2025-04-25T13:55:33.085Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.390Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.470Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.629Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:58:04.251Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T13:58:05.743Z"}
+{"level":"info","message":"New socket connection: PqRRK4goPdzJUaphAAAD","timestamp":"2025-04-25T13:58:06.362Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:06.508Z"}
+{"level":"info","message":"New socket connection: gM7demiAPIrejHXXAAAC","timestamp":"2025-04-25T13:58:06.581Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:06.686Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T13:58:12.725Z"}
+{"level":"info","message":"New socket connection: 5A28G13N3h7wJl-kAAAF","timestamp":"2025-04-25T13:58:13.774Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.414Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.640Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.701Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:11:46.111Z"}
+{"level":"info","message":"New socket connection: -E-I6x1FdXJjtQkZAAAH","timestamp":"2025-04-25T14:11:47.588Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:11:52.432Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:11:52.716Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:11:52.896Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:12:50.037Z"}
+{"level":"info","message":"New socket connection: tw50FwD8ay0wooXeAAAJ","timestamp":"2025-04-25T14:12:51.329Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:12:54.662Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:12:54.881Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:12:55.200Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:13:27.268Z"}
+{"level":"info","message":"New socket connection: dLpJsGaxGUAsS4dLAAAL","timestamp":"2025-04-25T14:13:28.400Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:13:30.873Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:13:31.410Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:13:31.459Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:27:59.534Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:28:13.665Z"}
+{"level":"info","message":"New socket connection: AClWGPji7gE5bgBXAAAN","timestamp":"2025-04-25T14:31:50.943Z"}
+{"level":"info","message":"New socket connection: xN8WA9BGbntdiv_OAAAP","timestamp":"2025-04-25T14:31:50.968Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:31:50.996Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:31:51.018Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:32:07.178Z"}
+{"level":"info","message":"New socket connection: _bPMqhhVfN-9a_LUAAAR","timestamp":"2025-04-25T14:32:08.564Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:32:12.530Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:32:12.848Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:32:12.957Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:33:15.987Z"}
+{"level":"info","message":"New socket connection: jKYhsUaA02RMT7RSAAAT","timestamp":"2025-04-25T14:34:20.357Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:34:20.450Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:34:26.925Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:34:27.126Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:34:27.275Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:35:08.935Z"}
+{"level":"info","message":"New socket connection: v23uX-OS3f0ojWMfAAAD","timestamp":"2025-04-25T14:35:09.572Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:35:09.653Z"}
+{"level":"info","message":"New socket connection: EhBStuZji7UeNxyEAAAB","timestamp":"2025-04-25T14:35:09.835Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:35:09.898Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:39:03.944Z"}
+{"level":"info","message":"New socket connection: npC_V9QthA5aPU6GAAAF","timestamp":"2025-04-25T14:39:04.893Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:39:19.503Z"}
+{"level":"info","message":"New socket connection: E5QxugXTgtzcARroAAAH","timestamp":"2025-04-25T14:39:20.425Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:21.351Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:21.580Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:21.622Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:40:29.820Z"}
+{"level":"info","message":"New socket connection: k0qquGmywNgkHq3VAAAJ","timestamp":"2025-04-25T14:40:30.726Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:40:36.917Z"}
+{"level":"info","message":"New socket connection: aCWOndHbMy0LJ4SLAAAL","timestamp":"2025-04-25T14:40:38.239Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:42.104Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:42.340Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:42.453Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:48.483Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:48.522Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:40:48.635Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:40:57.397Z"}
+{"level":"info","message":"New socket connection: X3ZSpPKBgbq81TOkAAAN","timestamp":"2025-04-25T14:41:15.484Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:41:20.059Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:41:20.232Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:41:20.479Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:43:36.494Z"}
+{"level":"info","message":"New socket connection: oEQPI8-BaLTvHWtPAAAP","timestamp":"2025-04-25T14:43:38.312Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:03.885Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:03.900Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:05.368Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:05.371Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:44:06.328Z"}
+{"level":"info","message":"New socket connection: _ED4tPdJB_Ru0ZEoAAAR","timestamp":"2025-04-25T14:44:07.845Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:22.659Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:22.668Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:23.963Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:44:23.965Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:44:25.600Z"}
+{"level":"info","message":"New socket connection: MFd2YShmemgJ8dh-AAAT","timestamp":"2025-04-25T14:44:27.075Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:44:38.684Z"}
+{"level":"info","message":"New socket connection: dIRdQv89UNUOCUnWAAAV","timestamp":"2025-04-25T14:44:39.272Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:45:34.041Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:45:34.202Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:45:34.547Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:45:54.091Z"}
+{"level":"info","message":"New socket connection: WMRfXS8wwNfSoZ1bAAAX","timestamp":"2025-04-25T14:45:54.870Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:47:56.545Z"}
+{"level":"info","message":"New socket connection: A06dS5lW4h2Z78BtAAAZ","timestamp":"2025-04-25T14:47:57.344Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:00.746Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:00.969Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:01.018Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:41.887Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:42.338Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:42.371Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:48:47.125Z"}
+{"level":"info","message":"New socket connection: DDPVprtuYcqnH9LvAAAb","timestamp":"2025-04-25T14:48:47.633Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:48:50.416Z"}
+{"level":"info","message":"New socket connection: rkfuf6FqB6aDdklhAAAd","timestamp":"2025-04-25T14:48:51.567Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:54.543Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:54.692Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:48:54.826Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:50:42.059Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:50:42.142Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:50:42.287Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:51:30.664Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:51:30.681Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:51:33.075Z"}
+{"level":"info","message":"New socket connection: bwb-8kFG_2IB2_LcAAAf","timestamp":"2025-04-25T14:51:33.919Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:51:39.701Z"}
+{"level":"info","message":"New socket connection: AnEwhsKRK1a_wf9BAAAh","timestamp":"2025-04-25T14:51:39.777Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:51:41.578Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:51:41.751Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:51:41.998Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:52:49.716Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:53:01.006Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:53:04.047Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:53:05.829Z"}
+{"level":"info","message":"New socket connection: 5alFhbtcQReoqf9sAAAD","timestamp":"2025-04-25T14:53:06.799Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:53:06.900Z"}
+{"level":"info","message":"New socket connection: vYpyVxz5-GmoqivHAAAB","timestamp":"2025-04-25T14:53:07.047Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:53:07.123Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:53:11.847Z"}
+{"level":"info","message":"New socket connection: l5EJOYM7KRkp8EVPAAAF","timestamp":"2025-04-25T14:53:12.797Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:53:23.483Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:53:23.679Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:53:24.150Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T14:54:28.707Z"}
+{"level":"info","message":"New socket connection: K4XWJ2UdceTfh9JGAAAB","timestamp":"2025-04-25T14:54:29.906Z"}
+{"level":"info","message":"New socket connection: mGnF37lGprlKaJW6AAAD","timestamp":"2025-04-25T14:54:29.941Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:54:29.957Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:54:29.997Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T14:54:36.133Z"}
+{"level":"info","message":"New socket connection: yaoORtqFehdmn8ALAAAF","timestamp":"2025-04-25T14:54:37.213Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:54:42.539Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:54:42.725Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T14:54:43.047Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:21:13.051Z"}
+{"level":"info","message":"New socket connection: 5b5Xj4Pqsnm6-JMBAAAB","timestamp":"2025-04-25T15:21:14.043Z"}
+{"level":"info","message":"New socket connection: H1mv2DAn1tzIJQqKAAAD","timestamp":"2025-04-25T15:21:15.016Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:21:15.068Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:23:22.956Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:23:31.648Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:23:32.570Z"}
+{"level":"info","message":"New socket connection: ZNt9jB_AkljMayHrAAAB","timestamp":"2025-04-25T15:23:37.053Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:23:43.199Z"}
+{"level":"info","message":"New socket connection: S2gAv7E6bxNB6-SiAAAB","timestamp":"2025-04-25T15:23:44.137Z"}
+{"level":"info","message":"New socket connection: Bt1zpJj4X1NTGv2cAAAD","timestamp":"2025-04-25T15:27:20.038Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:27:20.116Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:27:42.312Z"}
+{"level":"info","message":"New socket connection: DFIJB1GO-FXhZU92AAAF","timestamp":"2025-04-25T15:27:47.091Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:27:57.831Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:27:58.022Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:27:58.308Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:33:28.586Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:33:50.951Z"}
+{"level":"info","message":"New socket connection: x3sJcsJmXaCx1PCbAAAH","timestamp":"2025-04-25T15:34:04.583Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:34:06.663Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:34:07.140Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:34:07.144Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:36:07.867Z"}
+{"level":"info","message":"New socket connection: LnE0zhECfvRm-vwPAAAJ","timestamp":"2025-04-25T15:36:09.096Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:36:11.387Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:36:11.536Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:36:11.685Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:37:17.774Z"}
+{"level":"info","message":"New socket connection: 8KGgFX0-R15J8XDFAAAL","timestamp":"2025-04-25T15:37:19.198Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:24.531Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:24.730Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:24.920Z"}
+{"level":"info","message":"New socket connection: wuSxmFQg7OA9ZzzTAAAN","timestamp":"2025-04-25T15:37:26.065Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:37:41.571Z"}
+{"level":"info","message":"New socket connection: xQ95vcn7JK4UlSDhAAAP","timestamp":"2025-04-25T15:37:45.098Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:51.051Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:51.244Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:37:51.487Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:38:51.097Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:05.434Z"}
+{"level":"info","message":"New socket connection: w-QmGXqj9EvyQe9dAAAB","timestamp":"2025-04-25T15:39:06.192Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:39:06.238Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:08.408Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:11.075Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:12.458Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:13.852Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:15.323Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:17.161Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:19.801Z"}
+{"level":"info","message":"New socket connection: 3yHRmGVQBEblof6KAAAB","timestamp":"2025-04-25T15:39:20.525Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:39:20.577Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:21.968Z"}
+{"level":"info","message":"New socket connection: 23LEXPXdjPKDOVzjAAAB","timestamp":"2025-04-25T15:39:22.729Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:39:22.828Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:29.341Z"}
+{"level":"info","message":"New socket connection: 7FUb4Gn5Si7g3D0VAAAB","timestamp":"2025-04-25T15:39:30.047Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:39:30.101Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:33.762Z"}
+{"level":"info","message":"New socket connection: 33bncNNLHaFKIz7zAAAB","timestamp":"2025-04-25T15:39:34.784Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:39:34.829Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:39:45.433Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:40:14.562Z"}
+{"level":"info","message":"New socket connection: Etwn0dpTkoU8btKHAAAB","timestamp":"2025-04-25T15:40:15.337Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:40:15.382Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:40:17.721Z"}
+{"level":"info","message":"New socket connection: X7yW7cX0N_QOoFFYAAAB","timestamp":"2025-04-25T15:40:18.462Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:40:18.505Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:40:21.350Z"}
+{"level":"info","message":"New socket connection: o28-j4qu5QN8VdAgAAAB","timestamp":"2025-04-25T15:40:22.168Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:40:22.211Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:00.383Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:02.292Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:03.710Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:07.575Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:09.160Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:41:10.075Z"}
+{"level":"info","message":"New socket connection: D9HFe1DxLMhi-ynSAAAB","timestamp":"2025-04-25T15:41:11.500Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:41:11.537Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:41:56.916Z"}
+{"level":"info","message":"New socket connection: KoPI4z0SmiDfP7HYAAAD","timestamp":"2025-04-25T15:42:00.978Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:42:10.381Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:42:10.512Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:42:10.782Z"}
+{"level":"info","message":"New socket connection: rjctSzsUDKXcsovkAAAF","timestamp":"2025-04-25T15:42:36.080Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:43:23.884Z"}
+{"level":"info","message":"New socket connection: KZlz80YqMoZtkUcOAAAH","timestamp":"2025-04-25T15:43:26.526Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:43:50.090Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:43:50.293Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:43:50.564Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:44:01.117Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:46:03.524Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T15:46:04.859Z"}
+{"level":"info","message":"New socket connection: dBGTzlBDTdCPaGuuAAAB","timestamp":"2025-04-25T15:46:07.104Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T15:46:07.148Z"}
+{"level":"info","message":"New socket connection: U38UiCh0ii_OIqBNAAAD","timestamp":"2025-04-25T15:46:11.550Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:46:41.400Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T15:46:41.478Z"}
+{"level":"info","message":"New socket connection: Y59PwSpeF5QubWd4AAAF","timestamp":"2025-04-25T16:42:28.804Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T16:44:01.287Z"}
+{"level":"info","message":"New socket connection: eUJpJOEMSlMeumBOAAAH","timestamp":"2025-04-25T16:44:02.420Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:44:05.758Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:44:05.926Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:44:06.124Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T16:51:35.690Z"}
+{"level":"info","message":"New socket connection: kDxiT3XKPlOPF0UkAAAJ","timestamp":"2025-04-25T16:51:36.729Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T16:52:01.633Z"}
+{"level":"info","message":"New socket connection: cr0FNj9b50NM_sE-AAAL","timestamp":"2025-04-25T16:52:01.729Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:52:07.359Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:52:07.508Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:52:07.789Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T16:53:11.915Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T16:53:12.929Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T16:53:14.748Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T16:53:15.872Z"}
+{"level":"info","message":"New socket connection: Lu2FjIRGx7XRtxlIAAAB","timestamp":"2025-04-25T16:53:17.572Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:20.138Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:20.331Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:20.614Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:50.732Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:50.944Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:53:51.241Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T16:54:02.281Z"}
+{"level":"info","message":"New socket connection: s_-kYRlIdl7t46T_AAAB","timestamp":"2025-04-25T16:54:04.067Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:54:04.118Z"}
+{"level":"info","message":"New socket connection: 9ZzoFCguGc6dJazkAAAD","timestamp":"2025-04-25T16:54:08.824Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:54:11.628Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:54:11.800Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T16:54:11.928Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T17:03:59.315Z"}
+{"level":"info","message":"New socket connection: e0HPW3_33g-b6zo7AAAF","timestamp":"2025-04-25T17:04:00.766Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:03.994Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:04.241Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:04.487Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:26.865Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:27.042Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:04:27.197Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T17:31:46.618Z"}
+{"level":"info","message":"New socket connection: wEky7EadoWcJE-d2AAAB","timestamp":"2025-04-25T17:31:58.838Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:32:02.724Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:32:03.139Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:32:03.153Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:32:43.918Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:32:43.931Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:44.657Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:44.828Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:47.830Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.597Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.647Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.651Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.747Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.824Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.854Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.857Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.955Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.018Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.139Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.307Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.348Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:56.669Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:33:08.025Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:33:08.279Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T17:52:07.649Z"}
+{"level":"info","message":"New socket connection: 0smvUyEHx5H8rHgmAAAD","timestamp":"2025-04-25T17:54:09.216Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T17:54:09.629Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T17:54:11.710Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T17:59:21.015Z"}
+{"level":"info","message":"New socket connection: c1g8tgNNlfHH9L_XAAAB","timestamp":"2025-04-25T18:00:12.360Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:00:20.873Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:00:24.058Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:00:24.071Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:05:22.385Z"}
+{"level":"info","message":"New socket connection: 4tOUUwhfmH_Xa4sMAAAD","timestamp":"2025-04-25T18:09:11.032Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:10:36.037Z"}
+{"level":"info","message":"New socket connection: OZi4W_yLRGFt4sy5AAAF","timestamp":"2025-04-25T18:14:11.893Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:14.849Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:15.107Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:15.125Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:14:50.233Z"}
+{"level":"info","message":"New socket connection: k3tOnIq20f3bdIpVAAAH","timestamp":"2025-04-25T18:14:51.292Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:53.128Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:53.427Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:14:53.465Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T18:15:11.126Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T18:15:11.317Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T18:15:11.637Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:09.819Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:09.950Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:10.313Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.225Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.320Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.950Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.300Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.435Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.783Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:20:26.228Z"}
+{"level":"info","message":"New socket connection: rl_5IZ9iGtTKbzO1AAAJ","timestamp":"2025-04-25T18:24:17.086Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:24:17.170Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:25:42.077Z"}
+{"level":"info","message":"New socket connection: oVLwOtG0CBhwyclYAAAL","timestamp":"2025-04-25T18:29:26.034Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:29:26.126Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:30:51.034Z"}
+{"level":"info","message":"New socket connection: WPxGJJN2XY_yYRIeAAAN","timestamp":"2025-04-25T18:34:36.070Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:34:36.334Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:36:01.068Z"}
+{"level":"info","message":"New socket connection: PTKf68k22XnKextHAAAP","timestamp":"2025-04-25T18:39:46.059Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:39:46.158Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T18:41:11.083Z"}
+{"level":"info","message":"New socket connection: lukdslgqLWQ13tqUAAAR","timestamp":"2025-04-25T18:43:09.328Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:09.424Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:17.959Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:18.270Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:18.761Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:15:50.213Z"}
+{"level":"info","message":"New socket connection: IElKaJFskpKHwZ3rAAAT","timestamp":"2025-04-25T19:19:45.080Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:21:10.080Z"}
+{"level":"info","message":"New socket connection: iM0HwUCKAwqrzFJoAAAV","timestamp":"2025-04-25T19:24:54.028Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:26:19.056Z"}
+{"level":"info","message":"New socket connection: Yh7i-7QuKr7zqjUhAAAX","timestamp":"2025-04-25T19:30:04.018Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:31:29.046Z"}
+{"level":"info","message":"New socket connection: P9F0tkq7OCKWSusuAAAZ","timestamp":"2025-04-25T19:35:15.027Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:36:40.051Z"}
+{"level":"info","message":"New socket connection: QgvkZh73wfwSCrhrAAAb","timestamp":"2025-04-25T19:40:24.018Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:41:49.030Z"}
+{"level":"info","message":"New socket connection: VkttIFDDHuMbRSC9AAAd","timestamp":"2025-04-25T19:45:35.033Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:47:00.053Z"}
+{"level":"info","message":"New socket connection: 0eRuMNCwfwj746zZAAAf","timestamp":"2025-04-25T19:48:19.017Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.054Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.487Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.492Z"}
+{"level":"info","message":"New socket connection: 2m_VJwFnmGHJ7aR_AAAh","timestamp":"2025-04-25T19:50:44.029Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:52:09.044Z"}
+{"level":"info","message":"New socket connection: tlJQ5xb_sUNuc_sJAAAj","timestamp":"2025-04-25T19:55:55.045Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T19:57:20.053Z"}
+{"level":"info","message":"New socket connection: gJv6FZVDkGqj5jx4AAAl","timestamp":"2025-04-25T20:01:04.031Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T20:02:29.045Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T20:03:33.314Z"}
+{"level":"info","message":"New socket connection: PIYXN_u3YHoC5MZIAAAn","timestamp":"2025-04-25T20:15:36.168Z"}

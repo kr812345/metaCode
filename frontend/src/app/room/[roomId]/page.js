@@ -117,7 +117,7 @@ const RoomPage = () => {
         moveAvatar(roomId, x, y, direction);
     };
 
-    const handlLeaveRoom = async () => {
+    const handlLeaveRoomAndnavigate = async () => {
         try {
             await handleLeaveRoom(roomId);
             router.push('/dashboard');
@@ -177,7 +177,7 @@ const RoomPage = () => {
                 {/* Bottom Bar */}
                 <BottomBar
                     toggleChat={() => setActivePanel(prev => prev === 'chat' ? 'avatar' : 'chat')}
-                    onLeaveRoom={handlLeaveRoom}
+                    onLeaveRoom={handlLeaveRoomAndnavigate}
                 />
             </div>
         </div>

@@ -331,3 +331,87 @@
 {"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:05:47.553Z"}
 {"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:05:47.557Z"}
 {"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:08.456Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:36.812Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:36.872Z"}
+{"error":"Room validation failed: members.24.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:37.025Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.098Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.379Z"}
+{"error":"Room validation failed: members.25.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:47.688Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:58.884Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:58.984Z"}
+{"error":"Room validation failed: members.26.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:02:59.112Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.748Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.820Z"}
+{"error":"Room validation failed: members.27.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T13:03:11.949Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:04:04.965Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:04:05.242Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:11.842Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:11.912Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:08:12.027Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:26:42.865Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:26:50.337Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:08.498Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:16.280Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:19.016Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:38.034Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:27:47.046Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:28:03.762Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.349Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.891Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:29:18.912Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.553Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.701Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:31:28.837Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:25.849Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:26.062Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:26.339Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:39.813Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:39.999Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:32:40.105Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:03.894Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:04.060Z"}
+{"error":"Room validation failed: members.7.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:44:04.214Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.390Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.470Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:55:35.629Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:06.508Z"}
+{"error":"Room validation failed: members.8.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:06.686Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.414Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.640Z"}
+{"error":"Room validation failed: members.9.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T13:58:15.701Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:44.657Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:44.828Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:47.830Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.597Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.647Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.651Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.747Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.824Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.854Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.857Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:49.955Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.018Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.139Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.307Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:50.348Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T17:32:56.669Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:09.819Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:09.950Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:10.313Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.225Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.320Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:16:49.950Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.300Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.435Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:17:16.783Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:24:17.170Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:29:26.126Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:34:36.334Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:39:46.158Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:09.424Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:17.959Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:18.270Z"}
+{"error":"Room validation failed: members.5.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T18:43:18.761Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.054Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.487Z"}
+{"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.492Z"}
