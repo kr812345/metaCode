@@ -108,8 +108,8 @@ export const RoomProvider = ({ children }) => {
                     setRoomMembers(response.room.members);
                     return response.room;
                 } catch (socketError) {
-                    console.error('Socket join error:', socketError);
                     toast.error('Connected to room but socket connection failed. Some features may not work.');
+                    console.error('Socket join error:', socketError);
                     return response.room;
                 }
             } else {

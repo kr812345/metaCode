@@ -14,40 +14,56 @@ export const SocketProvider = ({ children }) => {
     const [reconnectAttempts, setReconnectAttempts] = useState(0);
 
     useEffect(() => {
-        if (!user?.token) {
-            if (socketManager) {
+        let isMounted = true;
+    
+        const connectSocket = async () => {
+            if (!user?.token) {
                 socketManager.disconnect();
                 setIsConnected(false);
                 setConnectionError(null);
                 setReconnectAttempts(0);
+                return;
             }
-            return;
-        }
-
-        const handleConnect = () => {
-            setIsConnected(true);
-            setConnectionError(null);
-            setReconnectAttempts(0);
-            toast.success('Connected to server');
+    
+            try {
+                await socketManager.connect(user.token);
+                if (!isMounted) return;
+    
+                const socket = socketManager.getSocket();
+                console.log('✅ Socket connected:', socket?.id);
+                setIsConnected(true);
+                toast.success('Connected to server');
+            } catch (err) {
+                console.error('❌ Socket failed to connect:', err);
+                setConnectionError(err.message);
+                toast.error(`Failed to connect: ${err.message}`);
+            }
+    
+            const cleanupConnect = socketManager.on('connect', () => {
+                if (!isMounted) return;
+                setIsConnected(true);
+                setConnectionError(null);
+            });
+    
+            const cleanupDisconnect = socketManager.on('disconnect', (reason) => {
+                if (!isMounted) return;
+                setIsConnected(false);
+                setConnectionError(reason);
+                toast.error(`Disconnected: ${reason}`);
+            });
+    
+            return () => {
+                cleanupConnect?.();
+                cleanupDisconnect?.();
+                socketManager.disconnect();
+                isMounted = false;
+            };
         };
-
-        const handleDisconnect = (reason) => {
-            setIsConnected(false);
-            setConnectionError(reason);
-            toast.error(`Disconnected: ${reason}`);
-        };
-
-        // Connect to socket
-        socketManager.connect(user.token);
-
-        // Add event listeners
-        const cleanupConnect = socketManager.on('connect', handleConnect);
-        const cleanupDisconnect = socketManager.on('disconnect', handleDisconnect);
-
+    
+        connectSocket();
+    
         return () => {
-            cleanupConnect();
-            cleanupDisconnect();
-            socketManager.disconnect();
+            isMounted = false;
         };
     }, [user?.token]);
 

@@ -101,7 +101,7 @@ const RoomPage = () => {
         // Join room when component mounts
         const joinRoomOnMount = () => {
             try {
-                 (async () => {await joinRoomContext(roomId)})();
+                // (async () => {await joinRoomContext(roomId)})();
             } catch (error) {
                 console.error('Error joining room:', error);
                 toast.error('Failed to join room');

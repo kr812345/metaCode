@@ -935,3 +935,46 @@
 {"level":"info","message":"Server running on port 3001","timestamp":"2025-04-20T14:41:11.426Z"}
 {"level":"info","message":"Server running on port 3001","timestamp":"2025-04-20T15:39:51.373Z"}
 {"level":"info","message":"Server running on port 3001","timestamp":"2025-04-20T17:58:27.658Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T05:51:28.493Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T08:19:08.720Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T08:19:21.672Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T08:32:10.577Z"}
+{"level":"info","message":"New socket connection: 3PeEb-cEkPW6tGiIAAAS","timestamp":"2025-04-25T11:39:34.807Z"}
+{"error":"Room validation failed: members.18.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:39:39.183Z"}
+{"error":"Room validation failed: members.18.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:39:39.360Z"}
+{"error":"Room validation failed: members.18.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:39:39.621Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T11:43:45.876Z"}
+{"level":"info","message":"New socket connection: e5TDEvKQjDZgH6jmAAAU","timestamp":"2025-04-25T11:43:47.141Z"}
+{"error":"Room validation failed: members.19.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:43:51.820Z"}
+{"error":"Room validation failed: members.19.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:43:52.014Z"}
+{"error":"Room validation failed: members.19.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:43:52.225Z"}
+{"level":"info","message":"Message sent in room 680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:46:25.606Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T11:47:00.627Z"}
+{"level":"info","message":"New socket connection: HUFmzHc5RwVa7QeLAAAW","timestamp":"2025-04-25T11:47:01.205Z"}
+{"error":"Room validation failed: members.20.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:47:04.509Z"}
+{"error":"Room validation failed: members.20.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:47:04.563Z"}
+{"error":"Room validation failed: members.20.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:47:04.714Z"}
+{"error":"Room validation failed: members.21.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:48:02.525Z"}
+{"error":"Room validation failed: members.21.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:48:02.744Z"}
+{"error":"Room validation failed: members.21.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:48:02.863Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:49:36.170Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:49:36.398Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:49:36.588Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:56:30.930Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T11:56:30.971Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T11:56:31.374Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T11:56:31.377Z"}
+{"error":"getaddrinfo ENOTFOUND ac-0zdhq68-shard-00-01.dhctmjl.mongodb.net","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:00:32.284Z"}
+{"error":"getaddrinfo ENOTFOUND ac-0zdhq68-shard-00-01.dhctmjl.mongodb.net","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:00:32.668Z"}
+{"level":"info","message":"New socket connection: kwmvM9BMQojIj6Z7AAAY","timestamp":"2025-04-25T12:02:26.747Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:02:26.779Z"}
+{"error":"Room validation failed: members.22.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:02:26.807Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T12:02:26.932Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:02:31.301Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:02:31.394Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:02:31.724Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:05:47.553Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:05:47.557Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T12:11:09.057Z"}
+{"level":"info","message":"New socket connection: R9wD2jITeMQoKgArAAAa","timestamp":"2025-04-25T12:51:08.269Z"}
+{"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:08.456Z"}

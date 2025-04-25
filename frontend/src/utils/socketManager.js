@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-const socketUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://localhost:3001';
 const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 const environment = process.env.NEXT_PUBLIC_ENVIRONMENT || 'development';
 
@@ -14,14 +14,14 @@ class SocketManager {
         this.reconnectDelay = 1000;
     }
 
-    connect() {
+    connect(tokenOverride) {
         if (this.socket) {
             this.disconnect();
         }
 
         try {
             // Get token from cookies
-            const token = document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
+            const token = tokenOverride || document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
             if (!token) {
                 throw new Error('No authentication token found');
             }
@@ -35,7 +35,7 @@ class SocketManager {
                 transports: ['websocket', 'polling'],
                 autoConnect: true,
             });
-
+            console.log('Socket initialized:', this.socket);
             this.setupEventListeners();
             return this.socket;
         } catch (error) {
