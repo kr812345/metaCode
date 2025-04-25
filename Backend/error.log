@@ -367,3 +367,5 @@
 {"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:07.444Z"}
 {"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:12.946Z"}
 {"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:13.011Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T22:46:36.329Z"}
+{"error":"Room validation failed: members.1.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T22:46:36.619Z"}
