@@ -135,7 +135,7 @@ export const RoomProvider = ({ children }) => {
 
         try {
             await leaveRoom(roomId);
-            socket.emit('leave-room', roomId);
+            await socket.emit('leave-room', roomId);
             setCurrentRoom(null);
             setRoomMembers([]);
             toast.success('Left room successfully');
