@@ -40,7 +40,7 @@ const RoomPage = () => {
     }, []);
 
     useEffect(() => {
-        if (isConnected && roomId) {
+        if (isConnected && roomId && !currentRoom) {
             joinRoom(roomId);
             
             // Listen for room member updates

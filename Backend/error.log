@@ -415,3 +415,4 @@
 {"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.054Z"}
 {"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.487Z"}
 {"error":"Room validation failed: members.6.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b884459612c2ba67bd3f7","timestamp":"2025-04-25T19:48:21.492Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:04:49.414Z"}

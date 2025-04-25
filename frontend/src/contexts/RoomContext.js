@@ -86,34 +86,31 @@ export const RoomProvider = ({ children }) => {
         }
 
         if (currentRoom?.id === roomId) {
-            return currentRoom; // Already in this room
+            return currentRoom;
         }
 
         setIsLoading(true);
         setError(null);
 
         try {
-            console.log('Attempting to join room via HTTP...');
             const response = await joinRoom(roomId);
             
             if (response.success) {
-                console.log('HTTP join successful:', response.room);
                 setCurrentRoom(response.room);
                 
-                try {
-                    console.log('Attempting to join room via socket...');
-                    await socket.emit('join-room', roomId);
-                    console.log('Socket join successful');
-                    toast.success('Joined room successfully');
-                    setRoomMembers(response.room.members);
-                    return response.room;
-                } catch (socketError) {
-                    toast.error('Connected to room but socket connection failed. Some features may not work.');
-                    console.error('Socket join error:', socketError);
-                    return response.room;
+                if (!socket.rooms || !socket.rooms[roomId]) {
+                    try {
+                        await socket.emit('join-room', roomId);
+                        toast.success('Joined room successfully');
+                    } catch (socketError) {
+                        toast.error('Connected to room but socket connection failed. Some features may not work.');
+                        console.error('Socket join error:', socketError);
+                    }
                 }
+                
+                setRoomMembers(response.room.members);
+                return response.room;
             } else {
-                console.error('Invalid response from server:', response);
                 throw new Error(response.message || 'Invalid response from server');
             }
         } catch (err) {

@@ -12,6 +12,7 @@ const { verifyUserMiddleware } = require('./middleware/userAuth');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user.model');
 const Room = require('./models/room.model');
+const CodeSession = require("./models/codeSession")
 
 const app = express();
 const server = http.createServer(app);
@@ -172,7 +173,7 @@ const setupSocketEventHandlers = (socket) => {
             });
 
             // Add user to room members if not already present
-            if (!room.members.some(member => member._id.equals(socket.user._id))) {
+            if (!room.members.some(member => member.user._id.equals(socket.user._id))) {
                 room.members.push(socket.user._id);
                 await room.save();
             }

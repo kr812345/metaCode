@@ -1431,3 +1431,80 @@
 {"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T20:02:29.045Z"}
 {"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T20:03:33.314Z"}
 {"level":"info","message":"New socket connection: PIYXN_u3YHoC5MZIAAAn","timestamp":"2025-04-25T20:15:36.168Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T23:04:36.364Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T23:04:48.417Z"}
+{"level":"info","message":"New socket connection: pM41_quEpSJRRYr_AAAB","timestamp":"2025-04-25T23:04:49.223Z"}
+{"error":"Room validation failed: members.4.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:04:49.414Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T23:05:38.086Z"}
+{"level":"info","message":"New socket connection: mnSHw1zldTmqeRxFAAAB","timestamp":"2025-04-25T23:05:38.775Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:05:38.973Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:05:43.039Z"}
+{"level":"info","message":"New socket connection: ukqQC58apGp9gyGEAAAD","timestamp":"2025-04-25T23:05:43.981Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:05:47.047Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:05:47.274Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:05:47.378Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:06:11.513Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:06:28.599Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:06:28.802Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:06:28.998Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:06:40.701Z"}
+{"level":"info","message":"New socket connection: 1f8hNsDhMbpO1E62AAAH","timestamp":"2025-04-25T23:07:37.023Z"}
+{"level":"info","message":"New socket connection: YA_XHjYs3WMSQtElAAAF","timestamp":"2025-04-25T23:07:37.028Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T23:07:37.102Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:09:02.027Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:09:02.045Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:10:27.504Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:10:27.550Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:10:27.913Z"}
+{"level":"info","message":"New socket connection: o4JCQf5ZaURg6Xb6AAAJ","timestamp":"2025-04-25T23:12:47.119Z"}
+{"level":"info","message":"New socket connection: KKVyih10PRUUT98dAAAL","timestamp":"2025-04-25T23:12:47.138Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T23:12:47.190Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:14:12.015Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:14:12.054Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:16:31.733Z"}
+{"level":"info","message":"New socket connection: S3xLV8lUezs07vnxAAAN","timestamp":"2025-04-25T23:16:32.735Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:16:39.797Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:16:39.957Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:16:40.140Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T23:17:25.372Z"}
+{"level":"info","message":"New socket connection: 9anJ2QJlFz3vc5h4AAAB","timestamp":"2025-04-25T23:17:25.956Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T23:17:28.607Z"}
+{"level":"info","message":"New socket connection: 623Hz7i8vYLScUq2AAAB","timestamp":"2025-04-25T23:17:29.233Z"}
+{"level":"info","message":"New socket connection: 79MqLSDtr2CcDP5VAAAD","timestamp":"2025-04-25T23:17:57.004Z"}
+{"level":"info","message":"New socket connection: VVAYTiQJUR1x6tl9AAAF","timestamp":"2025-04-25T23:17:57.016Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T23:17:57.044Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:19:22.026Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:19:22.029Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:19:44.438Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:19:44.583Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:19:44.876Z"}
+{"level":"warn","message":"Room capacity exceeded: 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:21:46.622Z"}
+{"level":"warn","message":"Room capacity exceeded: 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:21:46.775Z"}
+{"level":"warn","message":"Room capacity exceeded: 680c10cc1eabaf3f75e522fb","timestamp":"2025-04-25T23:21:46.948Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:22:12.656Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:22:12.822Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:22:48.077Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:22:48.239Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:22:48.386Z"}
+{"level":"info","message":"New socket connection: cgDFrK50UaDc5dfhAAAH","timestamp":"2025-04-25T23:23:06.990Z"}
+{"level":"info","message":"New socket connection: ZqSxhu6gGgPu8fwdAAAJ","timestamp":"2025-04-25T23:23:07.006Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T23:23:07.054Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:24:32.017Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:24:32.024Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:27:05.794Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:27:05.815Z"}
+{"level":"info","message":"New socket connection: _SgnSdMJVrBdYhuBAAAL","timestamp":"2025-04-25T23:28:16.989Z"}
+{"level":"info","message":"New socket connection: xOkooO3xlh0QVnAnAAAN","timestamp":"2025-04-25T23:28:17.002Z"}
+{"level":"warn","message":"Room capacity exceeded: 680b884459612c2ba67bd3f7","timestamp":"2025-04-25T23:28:17.038Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:29:42.001Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:29:42.014Z"}
+{"level":"info","message":"New socket connection: 1uxi078ayc3YHvhnAAAP","timestamp":"2025-04-25T23:32:00.995Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:32:56.320Z"}
+{"level":"info","message":"New socket connection: Jvlg_Zrpq1wuO3SbAAAR","timestamp":"2025-04-25T23:32:57.669Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:35:25.574Z"}
+{"level":"info","message":"New socket connection: tCDTfZaQ3CG5xhOFAAAT","timestamp":"2025-04-25T23:35:26.666Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:35:50.931Z"}
+{"level":"info","message":"New socket connection: BSmFYvYX3HDdgQfPAAAV","timestamp":"2025-04-25T23:36:46.237Z"}
+{"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T23:37:48.391Z"}
+{"level":"info","message":"New socket connection: QbcHDxoluMkhAwkYAAAX","timestamp":"2025-04-25T23:37:49.465Z"}
+{"level":"info","message":"User Garvit Gupta joined room 680c1924a32cfc856b55e4b6","timestamp":"2025-04-25T23:37:54.483Z"}

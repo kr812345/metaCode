@@ -17,7 +17,7 @@ const RoomManager = ({ roomId }) => {
     const [currentCode, setCurrentCode] = useState('');
 
     useEffect(() => {
-        if (roomId) {
+        if (roomId && !roomMembers.length) {
             joinRoom(roomId);
         }
 
