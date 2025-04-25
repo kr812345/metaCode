@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:3001/api';
 
 const axiosInstance = axios.create({
     baseURL: API_URL,
@@ -8,14 +8,15 @@ const axiosInstance = axios.create({
         'Content-Type': 'application/json',
         'Accept': 'application/json'
     },
-    withCredentials: true,
-    credentials: 'include'
+    withCredentials: true
 });
 
 // Request interceptor
 axiosInstance.interceptors.request.use(
     (config) => {
-        const token = document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
+        // Add auth token to headers if available
+        const token = localStorage.getItem('token') || 
+                      document.cookie.split('; ').find(row => row.startsWith('token='))?.split('=')[1];
         if (token) {
             config.headers.Authorization = `Bearer ${token}`;
         }

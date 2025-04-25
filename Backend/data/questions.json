@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "Sum of Two Numbers",
+      "difficulty": "easy",
+      "level": 1,
+      "category": "arrays",
+      "description": "Write a function that takes two numbers as input and returns their sum.",
+      "functionName": "sum",
+      "parameters": ["a", "b"],
+      "returnType": "number",
+      "testCases": [
+        {"input": [1, 2], "output": 3},
+        {"input": [5, 7], "output": 12},
+        {"input": [-3, 3], "output": 0},
+        {"input": [0, 0], "output": 0},
+        {"input": [100, 200], "output": 300}
+      ],
+      "starterCode": "function sum(a, b) {\n  // Your code here\n}",
+      "solution": "function sum(a, b) {\n  return a + b;\n}"
+    },
+    {
+      "id": 2,
+      "title": "Find Maximum",
+      "difficulty": "easy",
+      "level": 1,
+      "category": "arrays",
+      "description": "Write a function that finds the maximum value in an array of numbers.",
+      "functionName": "findMax",
+      "parameters": ["arr"],
+      "returnType": "number",
+      "testCases": [
+        {"input": [[1, 2, 3, 4, 5]], "output": 5},
+        {"input": [[5, 3, 9, 1, 7]], "output": 9},
+        {"input": [[-1, -5, -3]], "output": -1},
+        {"input": [[0]], "output": 0},
+        {"input": [[10, 10, 10]], "output": 10}
+      ],
+      "starterCode": "function findMax(arr) {\n  // Your code here\n}",
+      "solution": "function findMax(arr) {\n  return Math.max(...arr);\n}"
+    }
+  ]
+  

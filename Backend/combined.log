@@ -978,3 +978,109 @@
 {"level":"info","message":"User Garvit Gupta disconnected","timestamp":"2025-04-25T12:11:09.057Z"}
 {"level":"info","message":"New socket connection: R9wD2jITeMQoKgArAAAa","timestamp":"2025-04-25T12:51:08.269Z"}
 {"error":"Room validation failed: members.23.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"680b23d9e07fc1d25609d7f2","timestamp":"2025-04-25T12:51:08.456Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T17:58:31.971Z"}
+{"level":"info","message":"New socket connection: kh_Am9dea4t18qvSAAAB","timestamp":"2025-04-25T17:59:18.520Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:01:24.505Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:05:42.069Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:05:59.585Z"}
+{"level":"info","message":"New socket connection: 0DIcqnx0VaCyGq6TAAAB","timestamp":"2025-04-25T18:06:07.791Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:06:10.184Z"}
+{"level":"info","message":"New socket connection: IsYzJXxgVFsaZobTAAAD","timestamp":"2025-04-25T18:06:10.527Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:06:10.997Z"}
+{"level":"info","message":"New socket connection: D0Zc7ppvUj2lfG2zAAAF","timestamp":"2025-04-25T18:06:11.326Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:06:11.859Z"}
+{"level":"info","message":"New socket connection: Bfo1TR2N7OKdoa_gAAAH","timestamp":"2025-04-25T18:06:12.244Z"}
+{"error":"Room validation failed: members.77.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:06:26.210Z"}
+{"error":"Room validation failed: members.77.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:06:31.855Z"}
+{"error":"Room validation failed: members.77.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:06:32.090Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:08:14.559Z"}
+{"level":"info","message":"New socket connection: FpwTVcQAaxl4ROwQAAAJ","timestamp":"2025-04-25T18:08:16.162Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:23.216Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:23.427Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:23.479Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:33.623Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:33.629Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T18:08:34.022Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T18:08:34.022Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:56.509Z"}
+{"error":"Room validation failed: members.78.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67f6e9759400d5da64e55b01","timestamp":"2025-04-25T18:08:56.598Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:11:28.314Z"}
+{"level":"info","message":"New socket connection: C5HJWkmhT3uP805cAAAB","timestamp":"2025-04-25T18:11:29.190Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:13:52.116Z"}
+{"level":"info","message":"New socket connection: Ikw-cfEUuInUL7SAAAAB","timestamp":"2025-04-25T18:13:53.435Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:14:07.428Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:14:10.807Z"}
+{"level":"info","message":"New socket connection: ljvA8_se2F4y80BJAAAB","timestamp":"2025-04-25T18:14:12.132Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:17:28.715Z"}
+{"level":"info","message":"New socket connection: 42kp8H91mw7_zINfAAAB","timestamp":"2025-04-25T18:17:29.456Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:18:37.816Z"}
+{"level":"info","message":"New socket connection: e2muyV_oM5cFyzz8AAAB","timestamp":"2025-04-25T18:18:42.095Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:20:00.808Z"}
+{"level":"info","message":"New socket connection: FhMnwm2K05eqLeVjAAAB","timestamp":"2025-04-25T18:20:02.079Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:20:23.256Z"}
+{"level":"info","message":"New socket connection: 88M-QnZn3IFReU30AAAB","timestamp":"2025-04-25T18:20:24.062Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:20:29.677Z"}
+{"level":"info","message":"New socket connection: 4WOC6PzJI17iE1jtAAAD","timestamp":"2025-04-25T18:20:32.168Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T18:33:05.711Z"}
+{"level":"info","message":"New socket connection: CRKOdpD_2GFp0xCwAAAB","timestamp":"2025-04-25T18:33:06.849Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:33:27.102Z"}
+{"level":"info","message":"New socket connection: t2LHyYrwAuJHQqGXAAAD","timestamp":"2025-04-25T18:33:30.978Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T18:40:35.725Z"}
+{"level":"info","message":"New socket connection: 9fcrwXo4Iu_G6bzoAAAF","timestamp":"2025-04-25T18:40:36.483Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T19:13:54.505Z"}
+{"level":"info","message":"New socket connection: vqEmcgFrgzafYzxmAAAB","timestamp":"2025-04-25T19:14:18.436Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:15:08.697Z"}
+{"level":"info","message":"New socket connection: StHw7Nb1HkJBQQcTAAAD","timestamp":"2025-04-25T19:17:29.102Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:18:15.064Z"}
+{"level":"info","message":"New socket connection: MWftPEOHS31jDPkDAAAF","timestamp":"2025-04-25T19:21:24.750Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:25:20.704Z"}
+{"level":"info","message":"New socket connection: -UaWwTQ5SrTcN4SfAAAH","timestamp":"2025-04-25T19:25:21.853Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:25:35.130Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T19:25:48.247Z"}
+{"level":"info","message":"New socket connection: B19kKQfYUa4RXFcmAAAB","timestamp":"2025-04-25T19:26:18.205Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:26:42.411Z"}
+{"level":"info","message":"New socket connection: mj5jBaqztcLp66eEAAAD","timestamp":"2025-04-25T19:26:42.766Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:26:44.487Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:26:47.625Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:26:47.638Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:26:54.930Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:26:54.933Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:03.294Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:03.435Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:03.700Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:03.792Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:03.965Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:04.255Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:04.890Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:04.992Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:05.999Z"}
+{"error":"CodeSession is not defined","level":"error","message":"Error updating code","timestamp":"2025-04-25T19:27:06.186Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:27:07.793Z"}
+{"error":"Room validation failed: members.3.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"67fbf463e693b737ff75ca17","timestamp":"2025-04-25T19:27:08.045Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:04.319Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:04.430Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:04.526Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:07.442Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:07.444Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:12.946Z"}
+{"error":"Room validation failed: members.2.user: Path `user` is required.","level":"error","message":"Error joining room","roomId":"6805212aa4e2bcb914b267f2","timestamp":"2025-04-25T19:28:13.011Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:28:15.215Z"}
+{"level":"info","message":"New socket connection: LIg34skAwX1YaVDUAAAF","timestamp":"2025-04-25T19:34:35.800Z"}
+{"level":"info","message":"User krishna yadav disconnected","timestamp":"2025-04-25T19:41:54.783Z"}
+{"level":"info","message":"New socket connection: UzXfJhD3TFThCuotAAAH","timestamp":"2025-04-25T19:41:55.902Z"}
+{"level":"info","message":"Server running on port 3001","timestamp":"2025-04-25T19:49:38.291Z"}
+{"level":"info","message":"New socket connection: sGJHnWIoBUif2bjMAAAB","timestamp":"2025-04-25T19:50:15.042Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T19:51:02.295Z"}
+{"level":"info","message":"New socket connection: O4FTXsJf4puyE4BDAAAD","timestamp":"2025-04-25T19:51:03.175Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T19:53:39.414Z"}
+{"level":"info","message":"New socket connection: 8zy32VxrTm8ZvmfSAAAF","timestamp":"2025-04-25T19:53:40.528Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T19:53:48.460Z"}
+{"level":"info","message":"New socket connection: rR3FhhuSkpWnXuF2AAAH","timestamp":"2025-04-25T19:53:49.493Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T19:58:10.432Z"}
+{"level":"info","message":"New socket connection: lBHVrr9P_0lXON-YAAAJ","timestamp":"2025-04-25T19:58:11.156Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T20:02:32.402Z"}
+{"level":"info","message":"New socket connection: ZyQ5lhW6vY7TfM8LAAAL","timestamp":"2025-04-25T20:02:34.026Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T20:03:30.595Z"}
+{"level":"info","message":"New socket connection: a6eU-3wiX5GDLQKKAAAN","timestamp":"2025-04-25T20:03:31.423Z"}
+{"level":"info","message":"User Raghav disconnected","timestamp":"2025-04-25T20:13:35.720Z"}
+{"level":"info","message":"New socket connection: WHKZu2BG9R97wS_0AAAP","timestamp":"2025-04-25T20:13:36.749Z"}

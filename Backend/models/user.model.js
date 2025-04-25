@@ -1,35 +1,3 @@
-/*const mongoose = require('mongoose');
-
-const userSchema = new mongoose.Schema({
-    Name: { 
-        type: String, 
-        required: true 
-    },
-    Email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    Password: {
-        type: String,
-        required: true
-    },
-    Role: {
-        type: String,
-        enum: ['user', 'admin'],
-        default: 'user'
-    },
-    AvatarID: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'Avatar',
-        required: false
-    }
-}, {
-    timestamps: true
-});
-
-module.exports = mongoose.model('User', userSchema);*/
-
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -106,6 +74,20 @@ const userSchema = new mongoose.Schema({
             linkedin: String
         },
         default: {}
+    },
+    // New coding progress field
+    codingProgress: {
+        level: {
+            type: Number,
+            default: 1
+        },
+        solvedQuestions: [{
+            type: Number
+        }],
+        questionsToLevelUp: {
+            type: Number,
+            default: 5
+        }
     }
 }, {
     timestamps: true

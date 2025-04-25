@@ -13,6 +13,8 @@ import toast from 'react-hot-toast';
 import { useAuth } from '../../contexts/AuthContext';
 import { useRoom } from '../../contexts/RoomContext';
 import { useCookies } from 'react-cookie';
+import CodingProgress from '@/components/CodingProgress';
+import { getRequest } from '@/axiosReq/req.axios';
 
 const Dashboard = () => {
     const [isCreateFormOpen, setIsCreateFormOpen] = useState(false);
@@ -20,6 +22,8 @@ const Dashboard = () => {
     const { logout } = useAuth();
     const { rooms, fetchRooms, isLoading, setCurrentRoom, currentRoom } = useRoom();
     const [cookies] = useCookies(['token']);
+    const [userProgress, setUserProgress] = useState(null);
+    const [isProgressLoading, setIsProgressLoading] = useState(true);
 
     useEffect(() => {
         // Check if user is authenticated
@@ -31,105 +35,136 @@ const Dashboard = () => {
         } else {
             // Fetch rooms when component mounts
             fetchRooms();
-        }
-    }, [cookies.token, router]); // Don't include fetchRooms in dependency array
-
-    useEffect(() => {
-        // Clear current room when leaving dashboard
-        return () => {
-            setCurrentRoom(null);
-        };
-    }, [setCurrentRoom]);
-
-    const handleLogout = async (e) => {
-        e.preventDefault();
-        try {
-            // Clear current room
-            setCurrentRoom(null);
+                        // Fetch user progress
+                        fetchUserProgress();
+                    }
+                }, [cookies.token, router]); 
             
-            // Clear any active socket connections
-            if (window.socket) {
-                window.socket.disconnect();
-            }
+                const fetchUserProgress = async () => {
+                    try {
+                        setIsProgressLoading(true);
+                        const response = await getRequest('/questions/progress');
+                        if (response.success) {
+                            setUserProgress(response.progress);
+                        }
+                    } catch (error) {
+                        console.error('Error fetching user progress:', error);
+                        // Don't show error toast as this is not critical
+                    } finally {
+                        setIsProgressLoading(false);
+                    }
+                };
             
-            // Call logout
-            await logout();
+                useEffect(() => {
+                    // Clear current room when leaving dashboard
+                    return () => {
+                        setCurrentRoom(null);
+                    };
+                }, [setCurrentRoom]);
             
-            // Show success message
-            toast.success('Logged out successfully!');
-
-            // Redirect to login page
-            router.push('/login');
-        } catch (error) {
-            console.error('Logout error:', error);
-            toast.error('Logout failed. Please try again.');
-        }
-    };
-
-    const handleRefresh = async () => {
-        try {
-            setCurrentRoom(null); // Clear current room before refresh
-            await fetchRooms();
-            toast.success('Rooms refreshed successfully!');
-        } catch (error) {
-            console.error('Refresh error:', error);
-            toast.error('Failed to refresh rooms');
-        }
-    };
-
-    const memoizedParticles = useMemo(() => <Particles />, []);
-
-    return (
-        <div className='bg-[#0A0F1E] relative min-h-screen'>
-            {memoizedParticles}
-            <div className="relative z-10">
-                <header className="fixed w-full bg-[#1e3d9a] bg-opacity-60 border-3 backdrop-blur-lg border-[#0DF2FF] p-4">
-                    <div className="container mx-auto flex justify-between items-center">
-                        <Link href="/" className="flex items-center">
-                        <h1 className='text-[#0DF2FF] text-center font-bold text-2xl'> metaCode </h1> 
-                        </Link>
-                        <button onClick={handleLogout} className="flex items-center">
-                            <Image src={LogoutIcon} alt="Logout" width={28} height={28} />
-                        </button>
-                    </div>
-                </header>
-
-                <main className="container mx-auto p-4 pt-20">
-                    <div className="flex justify-between items-center mb-6">
-                        <h1 className="text-2xl font-bold text-white">Your Rooms</h1>
-                        <div className="flex gap-2">
-                            <button
-                                onClick={handleRefresh}
-                                className="bg-[#0DF2FF] text-white px-4 py-2 rounded-lg hover:bg-[#0acce6] transition"
-                            >
-                                Refresh
-                            </button>
-                            <button
-                                onClick={() => setIsCreateFormOpen(true)}
-                                className="bg-[#FF007A] text-white px-4 py-2 rounded-lg hover:bg-[#ff7aba] transition"
-                            >
-                                Create Room
-                            </button>
+                const handleLogout = async (e) => {
+                    e.preventDefault();
+                    try {
+                        // Clear current room
+                        setCurrentRoom(null);
+                        
+                        // Clear any active socket connections
+                        if (window.socket) {
+                            window.socket.disconnect();
+                        }
+                        
+                        // Call logout
+                        await logout();
+                        
+                        // Show success message
+                        toast.success('Logged out successfully!');
+            
+                        // Redirect to login page
+                        router.push('/login');
+                    } catch (error) {
+                        console.error('Logout error:', error);
+                        toast.error('Logout failed. Please try again.');
+                    }
+                };
+            
+                const handleRefresh = async () => {
+                    try {
+                        setCurrentRoom(null); // Clear current room before refresh
+                        await fetchRooms();
+                        await fetchUserProgress();
+                        toast.success('Data refreshed successfully!');
+                    } catch (error) {
+                        console.error('Refresh error:', error);
+                        toast.error('Failed to refresh data');
+                    }
+                };
+            
+                const memoizedParticles = useMemo(() => <Particles />, []);
+            
+                return (
+                    <div className='bg-[#0A0F1E] relative min-h-screen'>
+                        {memoizedParticles}
+                        <div className="relative z-10">
+                            <header className="fixed w-full bg-[#1e3d9a] bg-opacity-60 border-3 backdrop-blur-lg border-[#0DF2FF] p-4">
+                                <div className="container mx-auto flex justify-between items-center">
+                                    <Link href="/" className="flex items-center">
+                                        <h1 className='text-[#0DF2FF] text-center font-bold text-2xl'> metaCode </h1> 
+                                    </Link>
+                                    <div className="flex items-center space-x-4">
+                                        <Link href="/challenges" className="bg-[#FF007A] text-white px-4 py-2 rounded-lg hover:bg-[#ff7aba] transition">
+                                            Coding Challenges
+                                        </Link>
+                                        <button onClick={handleLogout} className="flex items-center">
+                                            <Image src={LogoutIcon} alt="Logout" width={28} height={28} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </header>
+            
+                            <main className="container mx-auto p-4 pt-20">
+                                {/* Coding Progress Section */}
+                                {!isProgressLoading && userProgress && (
+                                    <div className="mb-8">
+                                        <CodingProgress progress={userProgress} />
+                                    </div>
+                                )}
+            
+                                <div className="flex justify-between items-center mb-6">
+                                    <h1 className="text-2xl font-bold text-white">Your Rooms</h1>
+                                    <div className="flex gap-2">
+                                        <button
+                                            onClick={handleRefresh}
+                                            className="bg-[#0DF2FF] text-white px-4 py-2 rounded-lg hover:bg-[#0acce6] transition"
+                                        >
+                                            Refresh
+                                        </button>
+                                        <button
+                                            onClick={() => setIsCreateFormOpen(true)}
+                                            className="bg-[#FF007A] text-white px-4 py-2 rounded-lg hover:bg-[#ff7aba] transition"
+                                        >
+                                            Create Room
+                                        </button>
+                                    </div>
+                                </div>
+            
+                                {isLoading ? (
+                                    <div className="text-white text-center">Loading rooms...</div>
+                                ) : (
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                        {rooms.map((room) => (
+                                            <SpaceCard key={room.id} room={room} />
+                                        ))}
+                                    </div>
+                                )}
+                            </main>
+            
+                            {isCreateFormOpen && (
+                                <CreateRoom onClose={() => setIsCreateFormOpen(false)} />
+                            )}
                         </div>
                     </div>
-
-                    {isLoading ? (
-                        <div className="text-white text-center">Loading rooms...</div>
-                    ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4">
-                            {rooms.map((room) => (
-                                <SpaceCard key={room.id} room={room} />
-                            ))}
-                        </div>
-                    )}
-                </main>
-
-                {isCreateFormOpen && (
-                    <CreateRoom onClose={() => setIsCreateFormOpen(false)} />
-                )}
-            </div>
-        </div>
-    );
-};
-
-export default Dashboard;
+                );
+            };
+            
+            export default Dashboard;
+            

@@ -6,6 +6,7 @@ import { RoomProvider } from '../contexts/RoomContext';
 import { VideoCallProvider } from '../contexts/VideoCallContext';
 import { Toaster } from 'react-hot-toast';
 import { CookiesProvider } from 'react-cookie';
+import Navigation from '@/components/Navigation';  // Make sure this path is correct
 import './globals.css'
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
               <RoomProvider>
                 <VideoCallProvider>
                   {children}
+                  <Navigation />
                 </VideoCallProvider>
               </RoomProvider>
             </SocketProvider>
