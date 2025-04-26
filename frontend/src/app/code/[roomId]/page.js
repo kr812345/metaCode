@@ -127,7 +127,7 @@ const CodeEditorPage = () => {
                     {/* Bottom Bar */}
                     <div className="mt-2">
                         <BottomBar
-                            onLeaveRoom={handleLeaveEditor}
+                            onLeaveRoom={onLeaveRoom}
                             toggleChat={handleToggleChat} // Pass the handler here
                         />
                     </div>

@@ -117,13 +117,15 @@ const RoomPage = () => {
         moveAvatar(roomId, x, y, direction);
     };
 
-    const handlLeaveRoomAndnavigate = async () => {
+    const handleLeaveRoomAndnavigate = async () => {
         try {
             await handleLeaveRoom(roomId);
-            router.push('/dashboard');
         } catch (error) {
             console.error('Leave room error:', error);
             toast.error('Failed to leave room');
+        } finally {
+            // Always navigate to dashboard, even if there was an error
+            router.push('/dashboard');
         }
     };
 
@@ -177,7 +179,7 @@ const RoomPage = () => {
                 {/* Bottom Bar */}
                 <BottomBar
                     toggleChat={() => setActivePanel(prev => prev === 'chat' ? 'avatar' : 'chat')}
-                    onLeaveRoom={handlLeaveRoomAndnavigate}
+                    onLeaveRoom={handleLeaveRoomAndnavigate}
                 />
             </div>
         </div>

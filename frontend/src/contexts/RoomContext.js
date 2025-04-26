@@ -107,7 +107,7 @@ export const RoomProvider = ({ children }) => {
                         console.error('Socket join error:', socketError);
                     }
                 }
-                
+                setCurrentRoom(roomId);
                 setRoomMembers(response.room.members);
                 return response.room;
             } else {
@@ -125,64 +125,114 @@ export const RoomProvider = ({ children }) => {
     };
 
     const handleLeaveRoom = async (roomId) => {
-        if (!currentRoom) return;
-
         setIsLoading(true);
         setError(null);
 
         try {
-            await leaveRoom(roomId);
-            await socket.emit('leave-room', roomId);
-            setCurrentRoom(null);
-            setRoomMembers([]);
-            toast.success('Left room successfully');
+            // First make HTTP request to leave room
+            const response = await leaveRoom(roomId);
+            
+            if (response.success) {
+                // Then emit socket event to leave room
+                try {
+                    if (socket && isConnected) {
+                        await new Promise((resolve, reject) => {
+                            const timeout = setTimeout(() => {
+                                reject(new Error('Socket leave timeout'));
+                            }, 5000); // 5 second timeout
+
+                            socket.emit('leave-room', roomId, (error) => {
+                                clearTimeout(timeout);
+                                if (error) {
+                                    reject(error);
+                                } else {
+                                    resolve();
+                                }
+                            });
+                        });
+                    }
+                } catch (socketError) {
+                    console.error('Socket leave error:', socketError);
+                    // Don't throw here, we still want to update local state
+                }
+
+                // Update local state
+                setCurrentRoom(null);
+                setRoomMembers([]);
+                toast.success('Left room successfully');
+                return true;
+            } else {
+                throw new Error(response.message || 'Failed to leave room');
+            }
         } catch (err) {
             console.error('Leave room error:', err);
             const errorMessage = err.message || 'Failed to leave room';
             setError(errorMessage);
             toast.error(errorMessage);
+            throw err;
         } finally {
             setIsLoading(false);
         }
     };
 
-    const handleJoinByInvite = async (inviteCode) => {
+    const getInviteLink = async (roomId) => {
         if (!cookies.token) {
-            toast.error('Please log in to join a room');
+            toast.error('Please log in to get invite link');
             router.push('/login');
             return;
         }
 
-        setIsLoading(true);
-        setError(null);
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rooms/${roomId}/invite`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${cookies.token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed to get invite link');
+            }
+
+            return data;
+        } catch (error) {
+            console.error('Get invite link error:', error);
+            toast.error(error.message || 'Failed to get invite link');
+            throw error;
+        }
+    };
+
+    const handleJoinByInvite = async (inviteCode) => {
+        if (!cookies.token) {
+            toast.error('Please log in to join the room');
+            router.push('/login');
+            return;
+        }
 
         try {
-            const response = await joinRoomByInvite(inviteCode);
-            
-            if (response.success) {
-                setCurrentRoom(response.room);
-                // Connect to socket room
-                try {
-                    await socket.emit('join-room', response.room.id);
-                    toast.success('Joined room successfully');
-                    setRoomMembers(response.room.members);
-                    return response.room;
-                } catch (socketError) {
-                    console.error('Socket join error:', socketError);
-                    toast.error('Connected to room but socket connection failed. Some features may not work.');
-                    return response.room;
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/rooms/join/${inviteCode}`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${cookies.token}`,
+                    'Content-Type': 'application/json'
                 }
-            } else {
-                throw new Error(response.message || 'Failed to join room');
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.message || 'Failed to join room');
             }
-        } catch (err) {
-            console.error('Join room by invite error:', err);
-            const errorMessage = err.message || 'Failed to join room';
-            setError(errorMessage);
-            toast.error(errorMessage);
-            throw err;
-        } finally {
-            setIsLoading(false);
+
+            // Update current room and members
+            setCurrentRoom(data.room);
+            setRoomMembers(data.room.members);
+            return data.room;
+        } catch (error) {
+            console.error('Join room by invite error:', error);
+            toast.error(error.message || 'Failed to join room');
+            throw error;
         }
     };
 
@@ -249,8 +299,8 @@ export const RoomProvider = ({ children }) => {
         createRoom: handleCreateRoom,
         handleJoinRoom,
         handleLeaveRoom,
-        handleJoinByInvite,
-        getInviteLink
+        getInviteLink,
+        handleJoinByInvite
     };
 
     return (

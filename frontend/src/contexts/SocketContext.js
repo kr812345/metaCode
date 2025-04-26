@@ -26,13 +26,16 @@ export const SocketProvider = ({ children }) => {
             }
     
             try {
-                await socketManager.connect(user.token);
+                const socket = await socketManager.connect(user.token);
                 if (!isMounted) return;
     
-                const socket = socketManager.getSocket();
-                console.log('✅ Socket connected:', socket.user);
-                setIsConnected(true);
-                toast.success('Connected to server');
+                if (socket) {
+                    setIsConnected(true);
+                    setConnectionError(null);
+                    toast.success('Connected to server');
+                } else {
+                    throw new Error('Failed to initialize socket');
+                }
             } catch (err) {
                 console.error('❌ Socket failed to connect:', err);
                 setConnectionError(err.message);
@@ -43,6 +46,7 @@ export const SocketProvider = ({ children }) => {
                 if (!isMounted) return;
                 setIsConnected(true);
                 setConnectionError(null);
+                setReconnectAttempts(0);
             });
     
             const cleanupDisconnect = socketManager.on('disconnect', (reason) => {
@@ -51,10 +55,18 @@ export const SocketProvider = ({ children }) => {
                 setConnectionError(reason);
                 toast.error(`Disconnected: ${reason}`);
             });
+
+            const cleanupError = socketManager.on('connect_error', (error) => {
+                if (!isMounted) return;
+                setConnectionError(error.message);
+                setReconnectAttempts(prev => prev + 1);
+                toast.error(`Connection error: ${error.message}`);
+            });
     
             return () => {
                 cleanupConnect?.();
                 cleanupDisconnect?.();
+                cleanupError?.();
                 socketManager.disconnect();
                 isMounted = false;
             };

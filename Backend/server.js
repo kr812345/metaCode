@@ -304,7 +304,7 @@ const setupSocketEventHandlers = (socket) => {
     });
 
     // Leave Room Handling
-    socket.on("leave-room", async (roomId) => {
+    socket.on("leave-room", async (roomId, callback) => {
         try {
             // Update user status
             await User.findByIdAndUpdate(socket.user._id, { 
@@ -319,19 +319,18 @@ const setupSocketEventHandlers = (socket) => {
                 name: socket.user.name
             });
     
-            // ✅ FIX: Use socket.user._id correctly
-            await Room.findByIdAndUpdate(
-                roomId,
-                {
-                    $pull: {
-                        members: socket.user._id
-                    }
-                });
-    
             socket.leave(roomId);
             logger.info(`User ${socket.user.name} left room ${roomId}`);
+            
+            // Acknowledge the leave operation
+            if (typeof callback === 'function') {
+                callback(null);
+            }
         } catch (error) {
             logger.error('Error leaving room', { error: error.message });
+            if (typeof callback === 'function') {
+                callback(error);
+            }
         }
     });
     

@@ -219,26 +219,31 @@ const leaveRoom = async (req, res) => {
             });
         }
 
-        // If user is the creator, they can't leave the room
-        if (room.creator.toString() === userId.toString()) {
-            return res.status(400).json({ 
-                success: false,
-                message: "Room creator cannot leave the room" 
-            });
-        }
-
-        // Remove the member
-        const updatedRoom = await room.removeMember(userId);
-        if (!updatedRoom) {
-            return res.status(500).json({ 
-                success: false,
-                message: "Failed to leave room" 
-            });
-        }
+        // Remove the member and update memberCount
+        const updatedRoom = await roomModel.findByIdAndUpdate(
+            roomId,
+            {
+                $pull: {
+                    members: { user: userId }
+                },
+                $inc: { memberCount: -1 }
+            },
+            { new: true }
+        ).populate('members.user', 'name email');
 
         res.status(200).json({
             success: true,
-            message: "Left room successfully"
+            message: "Left room successfully",
+            room: {
+                id: updatedRoom._id,
+                name: updatedRoom.name,
+                description: updatedRoom.description,
+                creator: updatedRoom.creator,
+                members: updatedRoom.members,
+                memberCount: updatedRoom.memberCount,
+                createdAt: updatedRoom.createdAt,
+                updatedAt: updatedRoom.updatedAt
+            }
         });
     } catch (error) {
         console.error('Leave room error:', error);

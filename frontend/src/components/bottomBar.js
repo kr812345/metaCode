@@ -26,7 +26,8 @@ const BottomBar = ({ toggleChat, onLeaveRoom }) => {
         toggleMicrophone,
         endCall
     } = useVideoCall();
-    const { currentRoom } = useRoom();
+    const { currentRoom, getInviteLink } = useRoom();
+    const [isCopying, setIsCopying] = useState(false);
 
     const handleChatToggle = () => {
         setIsChatOpen(!isChatOpen);
@@ -55,16 +56,20 @@ const BottomBar = ({ toggleChat, onLeaveRoom }) => {
         toggleCamera();
     };
 
-    const handleCopyInviteLink = () => {
-        if (!currentRoom?.inviteCode) {
-            toast.error('Unable to generate invite link');
-            return;
+    const handleCopyInviteLink = async () => {
+        if (!currentRoom) return;
+        
+        try {
+            setIsCopying(true);
+            const { inviteLink } = await getInviteLink(currentRoom.id);
+            await navigator.clipboard.writeText(inviteLink);
+            toast.success('Invite link copied to clipboard!');
+        } catch (error) {
+            console.error('Error copying invite link:', error);
+            toast.error('Failed to copy invite link');
+        } finally {
+            setIsCopying(false);
         }
-
-        const inviteLink = `${window.location.origin}/invite/${currentRoom.inviteCode}`;
-        navigator.clipboard.writeText(inviteLink)
-            .then(() => toast.success('Invite link copied to clipboard!'))
-            .catch(() => toast.error('Failed to copy invite link'));
     };
 
     // Get username from localStorage or context if available
@@ -99,9 +104,12 @@ const BottomBar = ({ toggleChat, onLeaveRoom }) => {
                 <button onClick={handleChatToggle} className='w-15 flex justify-center p-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
                     <Image src={chatIcon} alt='Chat' width={24} height={24} />
                 </button>
-                <button onClick={handleCopyInviteLink} className='p-2 flex gap-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
-                    <Image src={users} alt='Invite' width={24} height={24} />
-                    <span className='text-white'>Invite</span>
+                <button
+                    onClick={handleCopyInviteLink}
+                    disabled={isCopying}
+                    className="bg-[#0DF2FF] text-black px-4 py-2 rounded-lg hover:bg-[#0df2ff99] transition disabled:opacity-50"
+                >
+                    {isCopying ? 'Copying...' : 'Copy Invite Link'}
                 </button>
                 <button className='p-2 flex gap-2 rounded-full bg-[#0A0F1E] hover:bg-[#0c1738c8] transition'>
                     <Image src={users} alt='usersIcon' width={24} height={24} />
