@@ -1,0 +1,109 @@
+# 🧩 2D Metacode
+
+**2D Metacode** is a 2D environment where users can interact and explore the available features such as practising coding and doing collaborative coding. It serves as a creative and educational platform to engage users in code-driven visual experiences and teamwork.
+
+---
+
+## 🚀 Features
+
+* 🧠 **Code-driven visuals** — Generate 2D patterns and shapes directly from logic or data.
+* 🎨 **Custom render engine** — Built with HTML5 Canvas / WebGL / Pygame (depending on your stack).
+* 🔄 **Live reloading** — See visual updates instantly as you modify the code.
+* ⚙️ **Modular architecture** — Easily plug in your own logic modules or shaders.
+* 🧩 **Meta-programming ready** — Define visual rules dynamically for emergent designs.
+* 🤝 **Collaborative Coding** — Work together with others in real-time to create, edit, and learn.
+
+---
+
+## 🧱 Tech Stack
+
+* **Language:** Python / JavaScript / TypeScript *(choose depending on your implementation)*
+* **Graphics:** Canvas2D / WebGL / Pygame
+* **Tools:** Vite / Flask / Node / Parcel *(optional)*
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/2d-metacode.git
+cd 2d-metacode
+
+# Install dependencies
+npm install        # if JavaScript
+# or
+pip install -r requirements.txt  # if Python
+```
+
+---
+
+## ▶️ Usage
+
+```bash
+# Run in development mode
+npm run dev
+# or
+python main.py
+```
+
+Open your browser at **[http://localhost:3000](http://localhost:3000)** or check your terminal to view the interactive environment.
+
+---
+
+## 🧰 Example
+
+```js
+// Example: Meta pattern generator
+createShape('circle', {
+  x: metaValue('time') * 10,
+  y: Math.sin(metaValue('angle')) * 100,
+  radius: 40,
+  color: metaColor('dynamic'),
+});
+```
+
+---
+
+## ⚡ Roadmap
+
+* [ ] Add physics-based motion
+* [ ] Add sound-reactive visuals
+* [ ] Add shader scripting support
+* [ ] Add export to SVG / GIF / video
+* [ ] Add collaborative coding sessions
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+3. Commit your changes
+
+   ```bash
+   git commit -m 'Add new feature'
+   ```
+4. Push to your branch
+
+   ```bash
+   git push origin feature/new-feature
+   ```
+5. Create a new Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 💡 Inspiration
+
+> “Metacode isn’t just art or logic — it’s a dialogue between geometry and imagination.”
+> — *Team 2D Metacode*
