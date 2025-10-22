@@ -1,23 +1,23 @@
 # 🧩 2D Metacode
 
-**2D Metacode** is a 2D environment where users can interact and explore the available features such as practising coding and doing collaborative coding. It serves as a creative and educational platform to engage users in code-driven visual experiences and teamwork.
+**2D Metacode** is an interactive 2D environment where users can explore, practise coding, and collaborate with others in real time. It provides a dynamic space for creative coding, teamwork, and hands-on experimentation with visual and logical programming.
 
 ---
 
 ## 🚀 Features
 
-* 🧠 **Code-driven visuals** — Generate 2D patterns and shapes directly from logic or data.
-* 🎨 **Custom render engine** — Built with HTML5 Canvas / WebGL / Pygame (depending on your stack).
-* 🔄 **Live reloading** — See visual updates instantly as you modify the code.
-* ⚙️ **Modular architecture** — Easily plug in your own logic modules or shaders.
-* 🧩 **Meta-programming ready** — Define visual rules dynamically for emergent designs.
-* 🤝 **Collaborative Coding** — Work together with others in real-time to create, edit, and learn.
+* 🧠 **Code-Driven Visuals** — Generate 2D patterns and animations directly from your logic or data.
+* 🎨 **Custom Render Engine** — Built with HTML5 Canvas / WebGL / Pygame (based on your stack).
+* 🔄 **Live Reloading** — Instantly see visual updates as you modify the code.
+* ⚙️ **Modular Architecture** — Plug in your own logic modules or shaders easily.
+* 🤝 **Collaborative Coding** — Code together in real-time, share progress, and learn collaboratively.
+* 🧩 **Meta-Programming Support** — Create dynamic, rule-based visuals and systems.
 
 ---
 
 ## 🧱 Tech Stack
 
-* **Language:** Python / JavaScript / TypeScript *(choose depending on your implementation)*
+* **Language:** Python / JavaScript / TypeScript *(depending on implementation)*
 * **Graphics:** Canvas2D / WebGL / Pygame
 * **Tools:** Vite / Flask / Node / Parcel *(optional)*
 
@@ -31,9 +31,9 @@ git clone https://github.com/yourusername/2d-metacode.git
 cd 2d-metacode
 
 # Install dependencies
-npm install        # if JavaScript
+npm install        # if using JavaScript
 # or
-pip install -r requirements.txt  # if Python
+pip install -r requirements.txt  # if using Python
 ```
 
 ---
@@ -47,7 +47,7 @@ npm run dev
 python main.py
 ```
 
-Open your browser at **[http://localhost:3000](http://localhost:3000)** or check your terminal to view the interactive environment.
+Once started, open **[http://localhost:3000](http://localhost:3000)** in your browser to explore the interactive environment.
 
 ---
 
@@ -71,29 +71,29 @@ createShape('circle', {
 * [ ] Add sound-reactive visuals
 * [ ] Add shader scripting support
 * [ ] Add export to SVG / GIF / video
-* [ ] Add collaborative coding sessions
+* [ ] Add real-time collaborative coding sessions
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch
+1. **Fork** the repository
+2. **Create a feature branch:**
 
    ```bash
    git checkout -b feature/new-feature
    ```
-3. Commit your changes
+3. **Commit your changes:**
 
    ```bash
    git commit -m 'Add new feature'
    ```
-4. Push to your branch
+4. **Push to the branch:**
 
    ```bash
    git push origin feature/new-feature
    ```
-5. Create a new Pull Request
+5. **Create a Pull Request**
 
 ---
 
